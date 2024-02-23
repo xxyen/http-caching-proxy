@@ -34,11 +34,10 @@ int Server::createServer() {
     cerr << "Error: cannot listen on socket" << endl;
     return -1;
   }
-
   return socket_fd;
 }
 
-int Server::acceptClient() {
+int Server::acceptClient(std::string* ip) {
   struct sockaddr_storage socket_addr;
   socklen_t socket_addr_len = sizeof(socket_addr);
   int client_connection_fd;
@@ -47,6 +46,10 @@ int Server::acceptClient() {
     cerr << "Error: cannot accept connection on socket" << endl;
     return -1;
   }
+  struct sockaddr_in* addr = (struct sockaddr_in*)&socket_addr;
+  struct in_addr addrin = addr->sin_addr;
+  char* client_ip = inet_ntoa(addrin);
+  *ip = client_ip;
   return client_connection_fd;
 }
 
@@ -74,6 +77,5 @@ int Client::createClient() {
     cerr << "Error: cannot connect to socket" << endl;
     return -1;
   }
-
   return socket_fd;
 }
