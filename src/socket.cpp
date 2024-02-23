@@ -1,6 +1,6 @@
 #include "socket.hpp"
 
-void Server::createServer() {
+int Server::createServer() {
   memset(&host_info, 0, sizeof(host_info));
 
   host_info.ai_family   = AF_UNSPEC;
@@ -34,9 +34,10 @@ void Server::createServer() {
     cerr << "Error: cannot listen on socket" << endl; 
     return -1;
   }
+  return socket_fd;
 }
 
-int Server::acceptClient() {
+int Server::acceptClient(std::string *ip) {
   struct sockaddr_storage socket_addr;
   socklen_t socket_addr_len = sizeof(socket_addr);
   int client_connection_fd;
@@ -45,10 +46,14 @@ int Server::acceptClient() {
     cerr << "Error: cannot accept connection on socket" << endl;
     return -1;
   }
+  struct sockaddr_in * addr = (struct sockaddr_in * )&socket_addr;
+  struct in_addr addrin = addr->sin_addr;
+  char* client_ip = inet_ntoa(addrin);
+  *ip = client_ip;
   return client_connection_fd;
 }
 
-void Client::createClient() {
+int Client::createClient() {
   memset(&host_info, 0, sizeof(host_info));
   host_info.ai_family   = AF_UNSPEC;
   host_info.ai_socktype = SOCK_STREAM;
@@ -72,4 +77,5 @@ void Client::createClient() {
     cerr << "Error: cannot connect to socket" << endl;
     return -1;
   }
+  return socket_fd;
 }

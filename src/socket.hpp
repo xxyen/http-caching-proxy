@@ -3,6 +3,7 @@
 #include <sys/socket.h>
 #include <netdb.h>
 #include <unistd.h>
+#include <string>
 
 using namespace std;
 
@@ -18,8 +19,8 @@ public:
   Server(const char *_port) {
     port = _port;
   }
-  void createServer();
-  int acceptClient();
+  int createServer();
+  int acceptClient(std::string *ip);
   ~Server() {
     freeaddrinfo(host_info_list);
     close(socket_fd);
@@ -39,7 +40,7 @@ public:
     hostname = _hostname;
     port = _port;
   }
-  void createClient();
+  int createClient();
   ~Client() {
     freeaddrinfo(host_info_list);
     close(socket_fd);
