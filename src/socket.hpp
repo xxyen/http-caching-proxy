@@ -4,6 +4,7 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <string>
+#include <arpa/inet.h>
 
 using namespace std;
 

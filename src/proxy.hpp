@@ -4,13 +4,13 @@
 
 class Proxy {
 private:
-    char* port;
+    const char* port;
 
 public:
-    Proxy(char* port);
+    Proxy(const char* port);
     ~Proxy();
     void start();
-    static void* handleRequest(void* clientFd);
-
+    static void* handleRequest(void* userInfo);
+    static std::string getCurrentTime();
 };
 

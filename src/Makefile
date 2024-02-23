@@ -1,7 +1,7 @@
-all: testparse
+all: main
 
-testparse: testparse.cpp request.cpp response.cpp
-	g++ -o testparse testparse.cpp request.cpp response.cpp
+main: main.cpp request.cpp response.cpp socket.cpp proxy.cpp
+	g++ -o main main.cpp request.cpp response.cpp socket.cpp proxy.cpp -lpthread
 
 clean:
-	rm -rf *.o testparse
+	rm -rf *.o main

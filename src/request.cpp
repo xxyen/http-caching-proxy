@@ -16,9 +16,15 @@ void Request::parse(const std::string& raw_request) {
         }
         else if (line.find("Host:") != std::string::npos) {
             host = line.substr(line.find(' ') + 1);
+            size_t host_line_end;
+            host_line_end = host.find_first_of("\r\n");
             if (host.find(':') != std::string::npos) {
-                port = host.substr(host.find(':') + 1);
+                port = host.substr(host.find(':') + 1, host_line_end);
                 host = host.substr(0, host.find(':'));
+            }
+            else {
+                host = host.substr(0, host_line_end);
+                port = "80";
             }
         }
         else if (line.find("Cache-Control:") != std::string::npos) {
