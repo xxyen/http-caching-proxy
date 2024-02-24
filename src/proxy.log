@@ -1,0 +1,22 @@
+0: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+0: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+1: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+1: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+2: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+2: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+3: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+3: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+4: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+4: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+5: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+5: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+6: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+6: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+7: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+7: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+8: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+8: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+9: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:25 2024
+9: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+10: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 19:30:32 2024
+10: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com

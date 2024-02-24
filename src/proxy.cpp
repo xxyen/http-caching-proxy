@@ -2,12 +2,12 @@
 #include "user.hpp"
 #include "request.hpp"
 #include "response.hpp"
-#include "utils.hpp"
 #include <iostream>
 #include <cstring>
 #include <pthread.h>
 #include <fstream>
 #include <ctime>
+#define MAX_SIZE 65536
 
 // std::ofstream logDoc("/var/log/erss/proxy.log");
 std::ofstream logDoc("proxy.log");
@@ -55,15 +55,15 @@ void Proxy::start() {
 
 void* Proxy::handleRequest(void* userInfo) {
     User* user = (User*)userInfo;
-    char message[65536] = { 0 };
-    int status = recv(user->getClientFd(), message, sizeof(message), 0);
+    vector<char> message(MAX_SIZE, 0);
+    int status = recv(user->getClientFd(), message.data(), sizeof(message), 0);
     if (status <= 0) {
         pthread_mutex_lock(&mutex);
         logDoc << user->getThreadId() << ": ERROR Invalid receive!" << endl;
         pthread_mutex_unlock(&mutex);
         return NULL;
     }
-    std::string req = std::string(message, status);
+    std::string req = std::string(message.data(), status);
 
     Request* request = new Request(req);
     pthread_mutex_lock(&mutex);
@@ -75,8 +75,14 @@ void* Proxy::handleRequest(void* userInfo) {
     Client* proxy_client = new Client(hostname, port);
     int server_fd = proxy_client->createClient();
 
-    if (request->getMethod() == "CONNECT") {
+    pthread_mutex_lock(&mutex);
+    logDoc << user->getThreadId() << ": Requesting \"" << request->getRequestLine() << "\" from " << request->getHost() << std::endl;
+    pthread_mutex_unlock(&mutex);
 
+    if (request->getMethod() == "CONNECT") {
+        pthread_mutex_lock(&mutex);
+        handleConnect(user->getClientFd(), server_fd, user->getThreadId());
+        pthread_mutex_unlock(&mutex);
     }
     else if (request->getMethod() == "GET") {
 
@@ -90,6 +96,37 @@ void* Proxy::handleRequest(void* userInfo) {
     close(user->getClientFd());
     delete proxy_client;
     return NULL;
+}
+void Proxy::handleConnect(int user_fd, int server_fd, int thread_id) {
+    const char* msg_to_user = "HTTP/1.1 200 OK\r\n\r\n";
+    send(user_fd, msg_to_user, sizeof(msg_to_user), 0);
+    pthread_mutex_lock(&mutex);
+    logDoc << thread_id << ": Responding \"HTTP/1.1 200 OK\"" << std::endl;
+    pthread_mutex_unlock(&mutex);
+
+    fd_set readfds;
+    int nfds = max(user_fd, server_fd) + 1;
+
+    while (true) {
+        FD_ZERO(&readfds);
+        FD_SET(user_fd, &readfds);
+        FD_SET(server_fd, &readfds);
+
+        select(nfds, &readfds, NULL, NULL, NULL);
+        int tmp[2] = { user_fd, server_fd };
+        for (int i = 0; i < 2; i++) {
+            vector<char> message(MAX_SIZE, 0);
+            if (FD_ISSET(tmp[i], &readfds)) {
+                int len = recv(tmp[i], message.data(), message.size(), 0);
+                if (len <= 0) return;
+                else {
+                    int len2 = send(tmp[i - i], message.data(), len, 0);
+                    if (len2 <= 0) return;
+                }
+            }
+        }
+    }
+
 }
 
 std::string Proxy::getCurrentTime() {
