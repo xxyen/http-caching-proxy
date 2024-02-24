@@ -56,14 +56,14 @@ void Proxy::start() {
 void* Proxy::handleRequest(void* userInfo) {
     User* user = (User*)userInfo;
     vector<char> message(MAX_SIZE, 0);
-    int status = recv(user->getClientFd(), message.data(), sizeof(message), 0);
+    int status = recv(user->getClientFd(), message.data(), message.size(), 0);
     if (status <= 0) {
         pthread_mutex_lock(&mutex);
         logDoc << user->getThreadId() << ": ERROR Invalid receive!" << endl;
         pthread_mutex_unlock(&mutex);
         return NULL;
     }
-    std::string req = std::string(message.data(), status);
+    std::string req = message.data();
 
     Request* request = new Request(req);
     pthread_mutex_lock(&mutex);
@@ -88,7 +88,9 @@ void* Proxy::handleRequest(void* userInfo) {
 
     }
     else if (request->getMethod() == "POST") {
-
+        pthread_mutex_lock(&mutex);
+        handlePost(user->getClientFd(), server_fd, user->getThreadId(), message, hostname);
+        pthread_mutex_unlock(&mutex);
     }
     else {
 
@@ -128,7 +130,26 @@ void Proxy::handleConnect(int user_fd, int server_fd, int thread_id) {
     }
 
 }
+void Proxy::handlePost(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname) {
+    send(server_fd, message.data(), message.size(), 0);
+    vector<char> response(MAX_SIZE, 0);
+    int len = recv(server_fd, response.data(), response.size(), 0);
+    if (len > 0) {
+        string res_str = response.data();
+        Response res(res_str);
+        pthread_mutex_lock(&mutex);
+        logDoc << thread_id << ": Received \"" << res.getFirstLine() << "\" from " << hostname << endl;
+        pthread_mutex_unlock(&mutex);
+        send(user_fd, response.data(), response.size(), 0);
 
+        pthread_mutex_lock(&mutex);
+        logDoc << thread_id << ": Responding \"" << res.getFirstLine() << endl;
+        pthread_mutex_unlock(&mutex);
+    }
+    else {
+        std::cerr << "Error: cannot get response from server!" << std::endl;
+    }
+}
 std::string Proxy::getCurrentTime() {
     std::time_t currentTime = std::time(NULL);
     std::tm* timeInfo = std::localtime(&currentTime);
