@@ -1,4 +1,5 @@
 #include "socket.hpp"
+#include"cache.hpp"
 #include <pthread.h>
 #include <vector>
 
@@ -13,6 +14,7 @@ public:
     static void* handleRequest(void* userInfo);
     static void handleConnect(int user_fd, int server_fd, int thread_id);
     static void handlePost(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname);
+    static void handleGet(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname, Cache* cache);
     static std::string getCurrentTime();
 };
 

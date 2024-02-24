@@ -3,7 +3,9 @@
 #include <iostream>
 #include <algorithm>
 #include <string.h>
+#include <pthread.h>
 
+pthread_mutex_t mutex2 = PTHREAD_MUTEX_INITIALIZER;
 void Response::parse(const std::string& raw_response)
 {
     std::istringstream response_stream(raw_response);
@@ -28,6 +30,21 @@ void Response::parse(const std::string& raw_response)
         }
         else if (line.find("Cache-Control:") != std::string::npos) {
             cache_control = line.substr(line.find(' ') + 1);
+            if (cache_control.find("max-age=") != std::string::npos) {
+                max_age = std::stoi(cache_control.substr(cache_control.find("max-age=") + 8));
+            }
+            if (cache_control.find("no-cache") != std::string::npos) {
+                no_cache = true;
+            }
+            if (cache_control.find("no-store") != std::string::npos) {
+                no_store = true;
+            }
+            if (cache_control.find("private") != std::string::npos) {
+                private_cache = true;
+            }
+            if (cache_control.find("public") != std::string::npos) {
+                public_cache = true;
+            }
         }
         else if (line.find("ETag:") != std::string::npos) {
             etag = line.substr(line.find(' ') + 1);
@@ -81,7 +98,7 @@ time_t convertStringToTimeT(const std::string& date_str)
     struct tm tm;
     memset(&tm, 0, sizeof(struct tm));
     const char* format = "%a, %d %b %Y %H:%M:%S %Z";
-    if (strptime(date_str.c_str(), format, &tm) == nullptr) {
+    if (strptime(date_str.c_str(), format, &tm) == NULL) {
         return static_cast<time_t>(-1);
     }
     time_t time = mktime(&tm);
@@ -97,3 +114,51 @@ time_t Response::getConvertedExpires() const
 {
     return convertStringToTimeT(expires);
 }
+
+bool Response::checkStrongCaching(int thread_id, std::ofstream& logDoc) {
+    if (max_age != -1) {
+        time_t res_time = getConvertedDate();
+        time_t cur_time = time(NULL) + 5 * 3600;
+        time_t expire_time = res_time + max_age;
+        std::tm* time_info = std::gmtime(&expire_time);
+        std::string t = asctime(time_info);
+        if (expire_time <= cur_time) {
+            pthread_mutex_lock(&mutex2);
+            logDoc << thread_id << ": in cache, but expired at " << t << std::endl;
+            pthread_mutex_unlock(&mutex2);
+            return false;
+        }
+    }
+    if (expires != "") {
+        time_t expire_time = getConvertedExpires();
+        time_t cur_time = time(NULL) + 5 * 3600;
+        std::tm* time_info = std::gmtime(&expire_time);
+        std::string t = asctime(time_info);
+        if (expire_time <= cur_time) {
+            pthread_mutex_lock(&mutex2);
+            logDoc << thread_id << ": in cache, but expired at " << t << std::endl;
+            pthread_mutex_unlock(&mutex2);
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// bool Response::checkNegotiatedCaching(int thread_id, std::ofstream& logDoc) {
+//     if (last_modified != "") {
+//         time_t res_time = getConvertedDate();
+//         time_t last_time = convertStringToTimeT(last_modified);
+//         time_t cur_time = time(NULL) + 5 * 3600;
+//         double valid_diff = difftime(res_time, last_time) / 10;
+//         double cur_diff = difftime(cur_time, res_time);
+//         if (valid_diff <= cur_diff) {
+//             pthread_mutex_lock(&mutex2);
+//             logDoc << thread_id << ": in cache, but requires re-validation" << std::endl;
+//             pthread_mutex_unlock(&mutex2);
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+

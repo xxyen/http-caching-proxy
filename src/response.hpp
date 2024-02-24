@@ -1,6 +1,6 @@
 #include <string>
 #include <ctime>
-
+#include<fstream>
 class Response {
 private:
     std::string response;
@@ -19,9 +19,15 @@ private:
     std::string first_line;
     time_t converted_date;
     time_t converted_expires;
+
     void parse(const std::string& raw_response);
 
 public:
+    bool no_cache = false;
+    bool no_store = false;
+    bool private_cache = false;
+    bool public_cache = false;
+    Response() {}
     Response(const std::string& raw_response) {
         parse(raw_response);
     }
@@ -41,6 +47,7 @@ public:
     std::string getFirstLine() const;
     time_t getConvertedDate() const;
     time_t getConvertedExpires() const;
+    bool checkStrongCaching(int thread_id, std::ofstream& logDoc);
 };
 
 

@@ -1,12 +1,13 @@
 #include "proxy.hpp"
 #include "user.hpp"
 #include "request.hpp"
-#include "response.hpp"
+// #include "response.hpp"
 #include <iostream>
 #include <cstring>
 #include <pthread.h>
 #include <fstream>
 #include <ctime>
+
 #define MAX_SIZE 65536
 
 // std::ofstream logDoc("/var/log/erss/proxy.log");
@@ -55,6 +56,7 @@ void Proxy::start() {
 
 void* Proxy::handleRequest(void* userInfo) {
     User* user = (User*)userInfo;
+    Cache* cache = new Cache(10);
     vector<char> message(MAX_SIZE, 0);
     int status = recv(user->getClientFd(), message.data(), message.size(), 0);
     if (status <= 0) {
@@ -80,17 +82,16 @@ void* Proxy::handleRequest(void* userInfo) {
     pthread_mutex_unlock(&mutex);
 
     if (request->getMethod() == "CONNECT") {
-        pthread_mutex_lock(&mutex);
         handleConnect(user->getClientFd(), server_fd, user->getThreadId());
+        pthread_mutex_lock(&mutex);
+        logDoc << user->getClientFd() << ": Tunnel closed" << endl;
         pthread_mutex_unlock(&mutex);
     }
     else if (request->getMethod() == "GET") {
-
+        handleGet(user->getClientFd(), server_fd, user->getThreadId(), message, hostname, cache);
     }
     else if (request->getMethod() == "POST") {
-        pthread_mutex_lock(&mutex);
         handlePost(user->getClientFd(), server_fd, user->getThreadId(), message, hostname);
-        pthread_mutex_unlock(&mutex);
     }
     else {
 
@@ -150,8 +151,68 @@ void Proxy::handlePost(int user_fd, int server_fd, int thread_id, vector<char> m
         std::cerr << "Error: cannot get response from server!" << std::endl;
     }
 }
-std::string Proxy::getCurrentTime() {
-    std::time_t currentTime = std::time(NULL);
-    std::tm* timeInfo = std::localtime(&currentTime);
-    return asctime(timeInfo);
+
+void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname, Cache* cache) {
+    std::string req = message.data();
+    Request req_parse(req);
+    std::string uri = req_parse.getUri();
+    Response cache_res = cache->get(uri);
+
+    if (cache_res.getResponse() == "") {
+        // not in cache
+        pthread_mutex_lock(&mutex);
+        logDoc << thread_id << ": not in cache" << endl;
+        pthread_mutex_unlock(&mutex);
+        send(server_fd, message.data(), message.size(), 0);
+        pthread_mutex_lock(&mutex);
+        logDoc << thread_id << ": Requesting \"" << req_parse.getRequest() << "\" from " << hostname << std::endl;
+        pthread_mutex_unlock(&mutex);
+        vector<char> res(MAX_SIZE, 0);
+        int len = recv(server_fd, res.data(), res.size(), 0);
+        if (len <= 0) {
+            std::cerr << "Error: receive failed" << std::endl;
+        }
+        std::string recv_res_str = res.data();
+        Response recv_res(recv_res_str);
+
+        if (recv_res.no_store) {
+            pthread_mutex_lock(&mutex);
+            logDoc << thread_id << ": not cacheable because cache control is no store" << endl;
+            pthread_mutex_unlock(&mutex);
+        }
+        else if (recv_res.private_cache) {
+            pthread_mutex_lock(&mutex);
+            logDoc << thread_id << ": not cacheable because cache control is private" << endl;
+            pthread_mutex_unlock(&mutex);
+        }
+        else {
+            pthread_mutex_lock(&mutex);
+            cache->put(req_parse.getUri(), recv_res);
+            pthread_mutex_unlock(&mutex);
+            if (recv_res.getExpires() != "") {
+                pthread_mutex_lock(&mutex);
+                logDoc << thread_id << ": cached, expires at " << recv_res.getExpires() << endl;
+                pthread_mutex_unlock(&mutex);
+            }
+            else {
+                pthread_mutex_lock(&mutex);
+                logDoc << thread_id << ": cached, but requires re-validation" << endl;
+                pthread_mutex_unlock(&mutex);
+            }
+        }
+        send(user_fd, res.data(), res.size(), 0);
+        pthread_mutex_lock(&mutex);
+        logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
+        pthread_mutex_unlock(&mutex);
+
+    }
+    else {
+        // in cache
+    }
 }
+std::string Proxy::getCurrentTime() {
+    std::time_t current_time = std::time(NULL);
+    std::tm* time_info = std::gmtime(&current_time);
+    return asctime(time_info);
+}
+

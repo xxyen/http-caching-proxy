@@ -19,7 +19,8 @@ void Request::parse(const std::string& raw_request) {
             size_t host_line_end;
             host_line_end = host.find_first_of("\r\n");
             if (host.find(':') != std::string::npos) {
-                port = host.substr(host.find(':') + 1, host_line_end);
+                // port = host.substr(host.find(':') + 1, host_line_end);
+                port = "80";
                 host = host.substr(0, host.find(':'));
             }
             else {

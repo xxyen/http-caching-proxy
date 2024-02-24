@@ -1,20 +1,1453 @@
-0: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-0: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-1: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-1: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-2: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-2: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-3: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-3: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-4: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-4: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-5: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-5: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-6: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-6: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-7: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-7: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-8: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-8: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
-9: "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from 10.197.140.48 @ Fri Feb 23 20:56:42 2024
-9: Requesting "GET http://www.ctrip.com/?allianceid=1381&sid=1624&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip= HTTP/1.1" from www.ctrip.com
+0: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:20:55 2024
+0: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+0: Responding "HTTP/1.1 200 OK"
+1: "CONNECT www.baidu.com:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:00 2024
+1: Requesting "CONNECT www.baidu.com:443 HTTP/1.1" from www.baidu.com
+1: Responding "HTTP/1.1 200 OK"
+2: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:02 2024
+2: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+2: Responding "HTTP/1.1 200 OK"
+8: Tunnel closed
+3: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:24 2024
+3: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+3: Responding "HTTP/1.1 200 OK"
+5: Tunnel closed
+4: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:25 2024
+4: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+4: Responding "HTTP/1.1 200 OK"
+10: Tunnel closed
+5: "CONNECT aus5.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:42 2024
+5: Requesting "CONNECT aus5.mozilla.org:443 HTTP/1.1" from aus5.mozilla.org
+5: Responding "HTTP/1.1 200 OK"
+6: Tunnel closed
+6: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:45 2024
+6: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+6: Responding "HTTP/1.1 200 OK"
+7: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:46 2024
+7: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+7: not in cache
+7: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+7: cached, but requires re-validation
+7: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+8: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:49 2024
+8: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+8: not in cache
+8: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+8: cached, but requires re-validation
+8: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+9: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:52 2024
+9: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+9: not in cache
+9: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+9: cached, but requires re-validation
+9: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+10: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:55 2024
+10: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+10: not in cache
+10: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+10: cached, but requires re-validation
+10: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+8: Tunnel closed
+11: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:21:58 2024
+11: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+11: not in cache
+11: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+11: cached, but requires re-validation
+11: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+12: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:01 2024
+12: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+12: not in cache
+12: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+12: cached, but requires re-validation
+12: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+5: Tunnel closed
+13: "GET http://ciscobinary.openh264.org/openh264-macosx64-aarch64-2e1774ab6dc6c43debb0b5b628bdf122a391d521-2.zip HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:02 2024
+13: Requesting "GET http://ciscobinary.openh264.org/openh264-macosx64-aarch64-2e1774ab6dc6c43debb0b5b628bdf122a391d521-2.zip HTTP/1.1" from ciscobinary.openh264.org
+13: not in cache
+13: Requesting "GET http://ciscobinary.openh264.org/openh264-macosx64-aarch64-2e1774ab6dc6c43debb0b5b628bdf122a391d521-2.zip HTTP/1.1
+Host: ciscobinary.openh264.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+" from ciscobinary.openh264.org
+13: cached, but requires re-validation
+13: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://ciscobinary.openh264.orghttp://ciscobinary.openh264.org/openh264-macosx64-aarch64-2e1774ab6dc6c43debb0b5b628bdf122a391d521-2.zip
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+14: "CONNECT ciscobinary.openh264.orghttp:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:02 2024
+14: Requesting "CONNECT ciscobinary.openh264.orghttp:443 HTTP/1.1" from ciscobinary.openh264.orghttp
+14: Responding "HTTP/1.1 200 OK"
+15: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:03 2024
+15: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+15: Responding "HTTP/1.1 200 OK"
+16: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:04 2024
+16: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+16: not in cache
+16: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+16: cached, but requires re-validation
+16: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+17: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:07 2024
+17: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+17: not in cache
+17: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+17: cached, but requires re-validation
+17: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+6: Tunnel closed
+18: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:11 2024
+18: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+18: not in cache
+18: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+18: cached, but requires re-validation
+18: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+19: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:14 2024
+19: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+19: not in cache
+19: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+19: cached, but requires re-validation
+19: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+20: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:17 2024
+20: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+20: not in cache
+20: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+20: cached, but requires re-validation
+20: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+10: Tunnel closed
+21: "POST http://ocsp.digicert.com/ HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:18 2024
+21: Requesting "POST http://ocsp.digicert.com/ HTTP/1.1" from ocsp.digicert.com
+21: Received "HTTP/1.0 302 Moved Temporarily" from ocsp.digicert.com
+21: Responding "HTTP/1.0 302 Moved Temporarily
+22: "CONNECT ocsp.digicert.comhttp:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:18 2024
+22: Requesting "CONNECT ocsp.digicert.comhttp:443 HTTP/1.1" from ocsp.digicert.comhttp
+22: Responding "HTTP/1.1 200 OK"
+23: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:20 2024
+23: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+23: not in cache
+23: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+23: cached, but requires re-validation
+23: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+24: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:23 2024
+24: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+24: not in cache
+24: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+24: cached, but requires re-validation
+24: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+25: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+25: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+25: not in cache
+25: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+25: cached, but requires re-validation
+25: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+26: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+26: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+26: Responding "HTTP/1.1 200 OK"
+28: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+27: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+29: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+30: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+28: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+28: Responding "HTTP/1.1 200 OK"
+27: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+27: Responding "HTTP/1.1 200 OK"
+32: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+31: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:26 2024
+30: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+30: Responding "HTTP/1.1 200 OK"
+29: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+29: Responding "HTTP/1.1 200 OK"
+32: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+31: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+31: Responding "HTTP/1.1 200 OK"
+32: Responding "HTTP/1.1 200 OK"
+33: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:29 2024
+33: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+33: not in cache
+33: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+33: cached, but requires re-validation
+33: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+34: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:29 2024
+34: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+34: not in cache
+34: Requesting "GET http://httpbin.org/forms/post HTTP/1.1
+Host: httpbin.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+" from httpbin.org
+34: cached, but requires re-validation
+34: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://httpbin.orghttp://httpbin.org/forms/post
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+35: "CONNECT httpbin.orghttp:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:29 2024
+35: Requesting "CONNECT httpbin.orghttp:443 HTTP/1.1" from httpbin.orghttp
+35: Responding "HTTP/1.1 200 OK"
+36: "CONNECT ublockorigin.github.io:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:31 2024
+38: "CONNECT cdn.statically.io:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:31 2024
+37: "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:31 2024
+36: Requesting "CONNECT ublockorigin.github.io:443 HTTP/1.1" from ublockorigin.github.io
+36: Responding "HTTP/1.1 200 OK"
+37: Requesting "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from cdn.jsdelivr.net
+37: Responding "HTTP/1.1 200 OK"
+38: Requesting "CONNECT cdn.statically.io:443 HTTP/1.1" from cdn.statically.io
+38: Responding "HTTP/1.1 200 OK"
+39: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:32 2024
+39: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+39: not in cache
+39: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+39: cached, but requires re-validation
+39: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+40: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:35 2024
+40: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+40: not in cache
+40: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+40: cached, but requires re-validation
+40: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+10: Tunnel closed
+5: Tunnel closed
+41: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:36 2024
+41: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+41: Responding "HTTP/1.1 200 OK"
+42: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:38 2024
+42: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+42: not in cache
+42: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+42: cached, but requires re-validation
+42: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+43: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:41 2024
+43: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+43: not in cache
+43: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+43: cached, but requires re-validation
+43: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+44: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:44 2024
+44: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+44: not in cache
+44: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+44: cached, but requires re-validation
+44: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+33: Tunnel closed
+45: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:46 2024
+45: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+45: Responding "HTTP/1.1 200 OK"
+46: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:47 2024
+46: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+46: not in cache
+46: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+46: cached, but requires re-validation
+46: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+8: Tunnel closed
+47: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:50 2024
+47: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+47: not in cache
+47: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+47: cached, but requires re-validation
+47: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+48: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:53 2024
+48: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+48: not in cache
+48: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+48: cached, but requires re-validation
+48: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+10: Tunnel closed
+49: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:56 2024
+49: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+49: not in cache
+49: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+49: cached, but requires re-validation
+49: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+12: Tunnel closed
+16: Tunnel closed
+23: Tunnel closed
+6: Tunnel closed
+13: Tunnel closed
+18: Tunnel closed
+52: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:57 2024
+51: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:57 2024
+52: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+52: Responding "HTTP/1.1 200 OK"
+51: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+51: Responding "HTTP/1.1 200 OK"
+50: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:57 2024
+50: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+50: Responding "HTTP/1.1 200 OK"
+53: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:57 2024
+53: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+53: Responding "HTTP/1.1 200 OK"
+55: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:57 2024
+54: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:57 2024
+55: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+55: Responding "HTTP/1.1 200 OK"
+54: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+54: Responding "HTTP/1.1 200 OK"
+56: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:22:59 2024
+56: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+56: not in cache
+56: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+56: cached, but requires re-validation
+56: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+24: Tunnel closed
+57: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:01 2024
+57: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+57: Responding "HTTP/1.1 200 OK"
+28: Tunnel closed
+32: Tunnel closed
+30: Tunnel closed
+58: "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:02 2024
+59: "CONNECT cdn.statically.io:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:02 2024
+60: "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:02 2024
+58: Requesting "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from ublockorigin.pages.dev
+59: Requesting "CONNECT cdn.statically.io:443 HTTP/1.1" from cdn.statically.io
+59: Responding "HTTP/1.1 200 OK"
+58: Responding "HTTP/1.1 200 OK"
+60: Requesting "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from ublockorigin.pages.dev
+60: Responding "HTTP/1.1 200 OK"
+61: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:03 2024
+61: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+61: not in cache
+61: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+61: cached, but requires re-validation
+61: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+62: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:06 2024
+62: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+62: not in cache
+62: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+62: cached, but requires re-validation
+62: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+63: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:09 2024
+63: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+63: not in cache
+63: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+63: cached, but requires re-validation
+63: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+19: Tunnel closed
+64: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:11 2024
+64: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+64: Responding "HTTP/1.1 200 OK"
+65: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:12 2024
+65: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+65: not in cache
+65: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+65: cached, but requires re-validation
+65: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+66: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:13 2024
+66: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+66: Responding "HTTP/1.1 200 OK"
+67: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:15 2024
+67: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+67: not in cache
+67: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+67: cached, but requires re-validation
+67: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+68: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:18 2024
+68: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+68: not in cache
+68: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+68: cached, but requires re-validation
+68: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+28: Tunnel closed
+30: Tunnel closed
+69: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:21 2024
+70: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:21 2024
+69: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+69: not in cache
+69: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+70: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+70: Responding "HTTP/1.1 200 OK"
+69: cached, but requires re-validation
+69: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+71: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:24 2024
+71: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+71: not in cache
+71: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+71: cached, but requires re-validation
+71: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+72: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:27 2024
+72: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+72: not in cache
+72: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+72: cached, but requires re-validation
+72: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+14: Tunnel closed
+7: Tunnel closed
+8: Tunnel closed
+6: Tunnel closed
+5: Tunnel closed
+12: Tunnel closed
+73: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:28 2024
+74: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:28 2024
+73: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+73: Responding "HTTP/1.1 200 OK"
+75: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:28 2024
+74: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+74: Responding "HTTP/1.1 200 OK"
+75: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+75: Responding "HTTP/1.1 200 OK"
+76: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:28 2024
+76: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+76: Responding "HTTP/1.1 200 OK"
+77: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:28 2024
+77: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+77: Responding "HTTP/1.1 200 OK"
+78: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:28 2024
+78: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+78: Responding "HTTP/1.1 200 OK"
+79: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:30 2024
+79: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+79: not in cache
+79: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+79: cached, but requires re-validation
+79: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+21: Tunnel closed
+80: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:33 2024
+80: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+80: not in cache
+80: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+80: cached, but requires re-validation
+80: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+15: Tunnel closed
+24: Tunnel closed
+23: Tunnel closed
+81: "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:34 2024
+83: "CONNECT cdn.statically.io:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:34 2024
+82: "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:34 2024
+83: Requesting "CONNECT cdn.statically.io:443 HTTP/1.1" from cdn.statically.io
+83: Responding "HTTP/1.1 200 OK"
+81: Requesting "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from cdn.jsdelivr.net
+81: Responding "HTTP/1.1 200 OK"
+82: Requesting "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from cdn.jsdelivr.net
+82: Responding "HTTP/1.1 200 OK"
+84: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:36 2024
+84: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+84: not in cache
+84: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+84: cached, but requires re-validation
+84: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+85: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:39 2024
+85: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+85: not in cache
+85: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+85: cached, but requires re-validation
+85: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+86: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:42 2024
+86: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+86: not in cache
+86: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+86: cached, but requires re-validation
+86: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+87: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:45 2024
+87: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+87: not in cache
+87: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+87: cached, but requires re-validation
+87: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+88: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:48 2024
+88: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+88: not in cache
+88: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+88: cached, but requires re-validation
+88: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+89: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:51 2024
+89: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+89: not in cache
+89: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+89: cached, but requires re-validation
+89: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+90: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:54 2024
+90: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+90: not in cache
+90: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+90: cached, but requires re-validation
+90: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+91: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:57 2024
+91: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+91: not in cache
+91: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+91: cached, but requires re-validation
+91: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+13: Tunnel closed
+5: Tunnel closed
+6: Tunnel closed
+9: Tunnel closed
+11: Tunnel closed
+28: Tunnel closed
+92: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:58 2024
+93: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:23:58 2024
+92: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+92: Responding "HTTP/1.1 200 OK"
+93: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+93: Responding "HTTP/1.1 200 OK"
+94: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:00 2024
+94: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+94: not in cache
+94: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+94: cached, but requires re-validation
+94: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+95: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:03 2024
+95: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+95: not in cache
+95: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+95: cached, but requires re-validation
+95: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+19: Tunnel closed
+15: Tunnel closed
+16: Tunnel closed
+97: "CONNECT ublockorigin.github.io:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:04 2024
+96: "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:04 2024
+96: Requesting "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from ublockorigin.pages.dev
+96: Responding "HTTP/1.1 200 OK"
+97: Requesting "CONNECT ublockorigin.github.io:443 HTTP/1.1" from ublockorigin.github.io
+97: Responding "HTTP/1.1 200 OK"
+98: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:06 2024
+98: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+98: not in cache
+98: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+98: cached, but requires re-validation
+98: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+99: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:09 2024
+99: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+99: not in cache
+99: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+99: cached, but requires re-validation
+99: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+100: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:12 2024
+100: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+100: not in cache
+100: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+100: cached, but requires re-validation
+100: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+101: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:15 2024
+101: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+101: not in cache
+101: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+101: cached, but requires re-validation
+101: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+102: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:19 2024
+102: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+102: not in cache
+102: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+102: cached, but requires re-validation
+102: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+103: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:22 2024
+103: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+103: not in cache
+103: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+103: cached, but requires re-validation
+103: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+104: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:25 2024
+105: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:25 2024
+104: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+104: Responding "HTTP/1.1 200 OK"
+105: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+105: not in cache
+105: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+105: cached, but requires re-validation
+105: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+106: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:28 2024
+106: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+106: not in cache
+106: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+106: cached, but requires re-validation
+106: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
+5: Tunnel closed
+21: Tunnel closed
+10: Tunnel closed
+107: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Sat Feb 24 20:24:31 2024
+107: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+107: not in cache
+107: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+Host: detectportal.firefox.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cache-Control: no-cache
+Pragma: no-cache
+Connection: keep-alive
+
+" from detectportal.firefox.com
+107: cached, but requires re-validation
+107: Responding "HTTP/1.0 302 Moved Temporarily
+Location: https://detectportal.firefox.comhttp://detectportal.firefox.com/canonical.html
+Server: BigIP
+Connection: Keep-Alive
+Content-Length: 0
+
+
