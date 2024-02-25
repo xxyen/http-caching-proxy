@@ -1,21 +1,10 @@
-0: "CONNECT www.google.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:11 2024
-0: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
-0: Responding "HTTP/1.1 200 OK"
-1: "CONNECT www.google.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:12 2024
-1: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
-1: Responding "HTTP/1.1 200 OK"
-2: "CONNECT clients4.google.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:12 2024
-2: Requesting "CONNECT clients4.google.com:443 HTTP/1.1" from clients4.google.com
-2: Responding "HTTP/1.1 200 OK"
-3: "CONNECT www.google.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:12 2024
-3: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
-3: Responding "HTTP/1.1 200 OK"
-4: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:12 2024
-4: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
-4: not in cache
-4: Requesting "GET http://httpbin.org/forms/post HTTP/1.1
+0: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:20 2024
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+0: not in cache
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1
 Host: httpbin.org
 Proxy-Connection: keep-alive
+Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
@@ -23,56 +12,72 @@ Accept-Encoding: gzip, deflate
 Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
 
 " from httpbin.org
-4: cached, but requires re-validation
-4: Responding "HTTP/1.0 302 Moved Temporarily
-Location: https://httpbin.orghttp://httpbin.org/forms/post
-Server: BigIP
-Connection: Keep-Alive
-Content-Length: 0
+0: cached, but requires re-validation
+0: Responding "HTTP/1.1 200 OK
+Date: Sun, 25 Feb 2024 06:02:20 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1397
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
 
-
-6: "CONNECT httpbin.orghttp:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:12 2024
-6: Requesting "CONNECT httpbin.orghttp:443 HTTP/1.1" from httpbin.orghttp
-6: Responding "HTTP/1.1 200 OK"
-7: "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:12 2024
-7: Requesting "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from optimizationguide-pa.googleapis.com
-7: Responding "HTTP/1.1 200 OK"
-5: Tunnel closed
-6: Tunnel closed
-8: Tunnel closed
-10: Tunnel closed
-15: Tunnel closed
-12: Tunnel closed
-8: "GET http://www.gstatic.com/generate_204 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:42 2024
-8: Requesting "GET http://www.gstatic.com/generate_204 HTTP/1.1" from www.gstatic.com
-8: not in cache
-8: Requesting "GET http://www.gstatic.com/generate_204 HTTP/1.1
-Host: www.gstatic.com
-Proxy-Connection: keep-alive
-Pragma: no-cache
-Cache-Control: no-cache
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
-Accept-Encoding: gzip, deflate
-Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
-
-" from www.gstatic.com
-8: cached, but requires re-validation
-8: Responding "HTTP/1.0 302 Moved Temporarily
-Location: https://www.gstatic.comhttp://www.gstatic.com/generate_204
-Server: BigIP
-Connection: Keep-Alive
-Content-Length: 0
-
-
-9: "CONNECT www.gstatic.comhttp:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:43 2024
-9: Requesting "CONNECT www.gstatic.comhttp:443 HTTP/1.1" from www.gstatic.comhttp
-9: Responding "HTTP/1.1 200 OK"
-12: "CONNECT httpbin.orghttp:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:44 2024
-11: "CONNECT httpbin.orghttp:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:44 2024
-10: "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 05:34:44 2024
-10: Requesting "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from optimizationguide-pa.googleapis.com
-10: Responding "HTTP/1.1 200 OK"
-11: Requesting "CONNECT httpbin.orghttp:443 HTTP/1.1" from httpbin.orghttp
-11: Responding "HTTP/1.1 200 OK"
-12: Requesting "CONNECT httpbin.orghttp:443 HTTP/1.1" from httpbin.orghttp
-12: Responding "HTTP/1.1 200 OK"
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  <!-- Example form from HTML5 spec http://www.w3.org/TR/html5/forms.html#writing-a-form's-user-interface -->
+  <form method="post" action="/post">
+   <p><label>Customer name: <input name="custname"></label></p>
+   <p><label>Telephone: <input type=tel name="custtel"></label></p>
+   <p><label>E-mail address: <input type=email name="custemail"></label></p>
+   <fieldset>
+    <legend> Pizza Size </legend>
+    <p><label> <input type=radio name=size value="small"> Small </label></p>
+    <p><label> <input type=radio name=size value="medium"> Medium </label></p>
+    <p><label> <input type=radio name=size value="large"> Large </label></p>
+   </fieldset>
+   <fieldset>
+    <legend> Pizza Toppings </legend>
+    <p><label> <input type=checkbox name="topping" value="bacon"> Bacon </label></p>
+    <p><label> <input type=checkbox name="topping" value="cheese"> Extra Cheese </label></p>
+    <p><label> <input type=checkbox name="topping" value="onion"> Onion </label></p>
+    <p><label> <input type=checkbox name="topping" value="mushroom"> Mushroom </label></p>
+   </fieldset>
+   <p><label>Preferred delivery time: <input type=time min="11:00" max="21:00" step="900" name="delivery"></label></p>
+   <p><label>Delivery instructions: <textarea name="comments"></textarea></label></p>
+   <p><button>Submit order</button></p>
+  </form>
+  </body>
+</html>
+1: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:42 2024
+1: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+2: "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:43 2024
+2: Requesting "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from optimizationguide-pa.googleapis.com
+2: Responding "HTTP/1.1 200 OK"
+1: Received "HTTP/1.1 200 OK" from httpbin.org
+1: Responding "HTTP/1.1 200 OK
+3: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:58 2024
+3: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+3: Received "HTTP/1.1 200 OK" from httpbin.org
+3: Responding "HTTP/1.1 200 OK
+5: "CONNECT www.google.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:01 2024
+5: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+5: Responding "HTTP/1.1 200 OK"
+4: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:08 2024
+4: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+4: Received "HTTP/1.1 200 OK" from httpbin.org
+4: Responding "HTTP/1.1 200 OK
+6: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:10 2024
+6: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+6: Received "HTTP/1.1 200 OK" from httpbin.org
+6: Responding "HTTP/1.1 200 OK
+7: Tunnel closed
+7: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:13 2024
+8: "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:13 2024
+8: Requesting "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from optimizationguide-pa.googleapis.com
+8: Responding "HTTP/1.1 200 OK"
+7: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+7: Received "HTTP/1.1 200 OK" from httpbin.org
+7: Responding "HTTP/1.1 200 OK
