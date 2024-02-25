@@ -6,10 +6,15 @@ void Request::parse(const std::string& raw_request) {
     std::istringstream request_stream(raw_request);
     std::string line;
     bool request_line_parsed = false;
+    std::string request_line_tmp;
 
     while (std::getline(request_stream, line)) {
         if (!request_line_parsed) {
-            request_line = line;
+            // request_line = line;
+            request_line_tmp = line;
+            size_t pos = request_line_tmp.find_first_of("\r\n");
+            request_line = request_line_tmp.substr(0, pos);
+
             std::istringstream line_stream(line);
             line_stream >> method >> uri;
             request_line_parsed = true;

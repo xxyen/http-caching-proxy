@@ -11,10 +11,13 @@ void Response::parse(const std::string& raw_response)
     std::istringstream response_stream(raw_response);
     std::string line;
     bool first_line_parsed = false;
+    std::string first_line_tmp;
 
     while (std::getline(response_stream, line)) {
         if (!first_line_parsed) {
-            first_line = line;
+            first_line_tmp = line;
+            size_t pos = first_line_tmp.find_first_of("\r\n");
+            first_line = first_line_tmp.substr(0, pos);
             std::istringstream line_stream(line);
             line_stream >> status; // Assumes status code is the second token in the line
             first_line_parsed = true;

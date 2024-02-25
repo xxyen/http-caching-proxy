@@ -22,13 +22,15 @@ void Cache::revalidate(Response& res, std::string req_header, int server_fd) {
     // if (etag == "" && last_modified == "") {
     //     return true;
     // }
-    std::string new_msg;
+    // std::cout << "req header (in revalidate()): " << req_header << std::endl << std::endl;
+    std::string new_msg = req_header;
     if (etag != "") {
         new_msg = req_header + "\r\n" + "If-None-Match: " + etag + "\r\n\r\n";
     }
     if (last_modified != "") {
         new_msg = req_header + "\r\n" + "If-Modified-Since: " + last_modified + "\r\n\r\n";
     }
+    // std::cout << "new_msg: " << new_msg << std::endl << std::endl;
     std::vector<char> new_req_msg(new_msg.begin(), new_msg.end());
     int send_len = send(server_fd, new_req_msg.data(), new_req_msg.size(), 0);
     if (send_len <= 0) {

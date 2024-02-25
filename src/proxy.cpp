@@ -15,6 +15,8 @@ std::ofstream logDoc("proxy.log");
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
+Cache* cache = new Cache(10);
+
 Proxy::Proxy(const char* port) : port(port) {}
 
 Proxy::~Proxy() {
@@ -56,7 +58,7 @@ void Proxy::start() {
 
 void* Proxy::handleRequest(void* userInfo) {
     User* user = (User*)userInfo;
-    Cache* cache = new Cache(10);
+    // Cache* cache = new Cache(10);
     vector<char> message(MAX_SIZE, 0);
     int status = recv(user->getClientFd(), message.data(), message.size(), 0);
     if (status <= 0) {
@@ -158,23 +160,30 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
     std::string uri = req_parse.getUri();
     Response cache_res = cache->get(uri);
 
+    // std::cout << "req uri:" << uri << std::endl << std::endl;
+    // std::cout << "cache res:" << cache_res.getResponse() << std::endl << std::endl;
+    // std::cout << "cache res2:" << cache->cache[uri].getResponse() << std::endl << std::endl;
+
     if (cache_res.getResponse() == "") {
         // not in cache
         pthread_mutex_lock(&mutex);
         logDoc << thread_id << ": not in cache" << endl;
+        // send request to server
         pthread_mutex_unlock(&mutex);
         send(server_fd, message.data(), message.size(), 0);
         pthread_mutex_lock(&mutex);
         logDoc << thread_id << ": Requesting \"" << req_parse.getRequest() << "\" from " << hostname << std::endl;
         pthread_mutex_unlock(&mutex);
         vector<char> res(MAX_SIZE, 0);
+        // get response from server
         int len = recv(server_fd, res.data(), res.size(), 0);
         if (len <= 0) {
             std::cerr << "Error: receive failed" << std::endl;
         }
         std::string recv_res_str = res.data();
         Response recv_res(recv_res_str);
-
+        // check if it is cacheable
+        // std::cout << "res cache control: no_store:" << recv_res.no_store << std::endl << std::endl;
         if (recv_res.no_store) {
             pthread_mutex_lock(&mutex);
             logDoc << thread_id << ": not cacheable because cache control is no store" << endl;
@@ -186,9 +195,12 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
             pthread_mutex_unlock(&mutex);
         }
         else {
+            // save into cache
+            // std::cout << "req uri:" << req_parse.getUri() << std::endl << std::endl;
             pthread_mutex_lock(&mutex);
             cache->put(req_parse.getUri(), recv_res);
             pthread_mutex_unlock(&mutex);
+            // std::cout << "cache res3:" << cache->cache[uri].getResponse() << std::endl << std::endl;
             if (recv_res.getExpires() != "") {
                 pthread_mutex_lock(&mutex);
                 logDoc << thread_id << ": cached, expires at " << recv_res.getExpires() << endl;
@@ -200,14 +212,98 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
                 pthread_mutex_unlock(&mutex);
             }
         }
+        // send response to user
         send(user_fd, res.data(), res.size(), 0);
         pthread_mutex_lock(&mutex);
         logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
         pthread_mutex_unlock(&mutex);
-
     }
     else {
         // in cache
+        // check if it is valid
+        bool isValid = cache_res.checkStrongCaching(thread_id, logDoc);
+        std::string cache_res_str = cache_res.getResponse();
+        vector<char> cache_res_msg(cache_res_str.begin(), cache_res_str.end());
+        if (isValid == true) {
+            // if valid, send response in cache to user
+            pthread_mutex_lock(&mutex);
+            logDoc << thread_id << ": in cache, valid " << endl;
+            pthread_mutex_unlock(&mutex);
+
+            send(user_fd, cache_res_msg.data(), cache_res_msg.size(), 0);
+            pthread_mutex_lock(&mutex);
+            logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+            pthread_mutex_unlock(&mutex);
+        }
+        else {
+            // if not valid, it needs revalidation
+            pthread_mutex_lock(&mutex);
+            logDoc << thread_id << ": in cache, requires validation" << endl;
+            pthread_mutex_unlock(&mutex);
+
+            // std::cout << "req header: " << req_parse.getHeader() << std::endl << std::endl;
+            cache->revalidate(cache_res, req_parse.getHeader(), server_fd);
+
+            vector<char> res(MAX_SIZE, 0);
+            // get response from server
+            int len = recv(server_fd, res.data(), res.size(), 0);
+            if (len <= 0) {
+                std::cerr << "Error: receive failed" << std::endl;
+            }
+            std::string recv_res_str = res.data();
+            Response recv_res(recv_res_str);
+            pthread_mutex_lock(&mutex);
+            logDoc << thread_id << ": Received \"" << recv_res.getFirstLine() << "\" from " << hostname << endl;
+            pthread_mutex_unlock(&mutex);
+
+            // check status code
+            std::string status = recv_res.getStatus();
+            if (status == "304") {
+                // 304, send response in cache to user
+                send(user_fd, cache_res_msg.data(), cache_res_msg.size(), 0);
+                pthread_mutex_lock(&mutex);
+                logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+                pthread_mutex_unlock(&mutex);
+            }
+            else if (status == "200") {
+                // 200, update cache, and send response to user
+
+                // maybe wirte a new function? this part is same as previous part when res is not in cache
+                if (recv_res.no_store) {
+                    pthread_mutex_lock(&mutex);
+                    logDoc << thread_id << ": not cacheable because cache control is no store" << endl;
+                    pthread_mutex_unlock(&mutex);
+                }
+                else if (recv_res.private_cache) {
+                    pthread_mutex_lock(&mutex);
+                    logDoc << thread_id << ": not cacheable because cache control is private" << endl;
+                    pthread_mutex_unlock(&mutex);
+                }
+                else {
+                    // save into cache
+                    pthread_mutex_lock(&mutex);
+                    cache->put(req_parse.getUri(), recv_res);
+                    pthread_mutex_unlock(&mutex);
+                    if (recv_res.getExpires() != "") {
+                        pthread_mutex_lock(&mutex);
+                        logDoc << thread_id << ": cached, expires at " << recv_res.getExpires() << endl;
+                        pthread_mutex_unlock(&mutex);
+                    }
+                    else {
+                        pthread_mutex_lock(&mutex);
+                        logDoc << thread_id << ": cached, but requires re-validation" << endl;
+                        pthread_mutex_unlock(&mutex);
+                    }
+                }
+
+                send(user_fd, res.data(), res.size(), 0);
+                pthread_mutex_lock(&mutex);
+                logDoc << thread_id << ": Responding \"" << recv_res.getFirstLine() << endl;
+                pthread_mutex_unlock(&mutex);
+            }
+        }
+
+
     }
 }
 std::string Proxy::getCurrentTime() {
