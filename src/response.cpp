@@ -19,7 +19,7 @@ void Response::parse(const std::string& raw_response)
             size_t pos = first_line_tmp.find_first_of("\r\n");
             first_line = first_line_tmp.substr(0, pos);
             std::istringstream line_stream(line);
-            line_stream >> status; // Assumes status code is the second token in the line
+            line_stream >> http_version >> status_code >> status_msg; // Assumes status code is the second token in the line
             first_line_parsed = true;
         }
         else if (line.find("Content-Length:") != std::string::npos) {
@@ -82,7 +82,7 @@ void Response::parse(const std::string& raw_response)
 }
 
 std::string Response::getResponse() const { return response; }
-std::string Response::getStatus() const { return status; }
+std::string Response::getStatus() const { return status_code; }
 std::string Response::getDate() const { return date; }
 std::string Response::getContentType() const { return content_type; }
 std::string Response::getExpires() const { return expires; }
@@ -95,8 +95,11 @@ std::string Response::getCacheControl() const { return cache_control; }
 std::string Response::getEtag() const { return etag; }
 std::string Response::getLastModified() const { return last_modified; }
 std::string Response::getFirstLine() const { return first_line; }
+bool Response::isChunked() const {
+    return (transfer_encoding.find("chunked") != std::string::npos);
+}
 
-time_t convertStringToTimeT(const std::string& date_str)
+time_t Response::convertStringToTimeT(const std::string& date_str) const
 {
     struct tm tm;
     memset(&tm, 0, sizeof(struct tm));

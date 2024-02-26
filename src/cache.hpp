@@ -1,5 +1,6 @@
-#include<unordered_map>
-#include"response.hpp"
+#include <unordered_map>
+#include "response.hpp"
+#include "request.hpp"
 class Cache {
 private:
     std::unordered_map<std::string, Response> cache;
@@ -10,6 +11,6 @@ public:
     Cache(size_t cap) : capacity(cap) {}
     Response get(std::string key);
     void put(std::string key, Response res);
-    void revalidate(Response& res, std::string req_header, int server_fd);
+    void revalidate(Response & res, Request & req, int server_fd);
 };
 

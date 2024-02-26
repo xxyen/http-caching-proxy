@@ -16,5 +16,6 @@ public:
     static void handlePost(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname);
     static void handleGet(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname, Cache* cache);
     static std::string getCurrentTime();
+    static int recv_all(int _fd, vector<char> & msg);
 };
 

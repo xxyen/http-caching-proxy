@@ -4,7 +4,9 @@
 class Response {
 private:
     std::string response;
-    std::string status;
+    std::string http_version;
+    std::string status_code;
+    std::string status_msg;
     std::string date;
     std::string content_type;
     std::string expires;
@@ -45,6 +47,8 @@ public:
     std::string getEtag() const;
     std::string getLastModified() const;
     std::string getFirstLine() const;
+    bool isChunked() const;
+    time_t convertStringToTimeT(const std::string& date_str) const;
     time_t getConvertedDate() const;
     time_t getConvertedExpires() const;
     bool checkStrongCaching(int thread_id, std::ofstream& logDoc);

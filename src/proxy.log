@@ -1,20 +1,18 @@
-0: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:20 2024
+0: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:17 2024
 0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
 0: not in cache
 0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1
 Host: httpbin.org
-Proxy-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,zh-CN;q=0.7,en;q=0.3
 Accept-Encoding: gzip, deflate
-Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
 
 " from httpbin.org
-0: cached, but requires re-validation
 0: Responding "HTTP/1.1 200 OK
-Date: Sun, 25 Feb 2024 06:02:20 GMT
+Date: Mon, 26 Feb 2024 04:35:20 GMT
 Content-Type: text/html; charset=utf-8
 Content-Length: 1397
 Connection: keep-alive
@@ -50,34 +48,196 @@ Access-Control-Allow-Credentials: true
    <p><button>Submit order</button></p>
   </form>
   </body>
+</html>HTTP/1.1 400 Bad Request
+Server: awselb/2.0
+Date: Mon, 26 Feb 2024 04:35:20 GMT
+Content-Type: text/html
+Content-Length: 122
+Connection: close
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
 </html>
-1: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:42 2024
-1: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
-2: "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:43 2024
-2: Requesting "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from optimizationguide-pa.googleapis.com
-2: Responding "HTTP/1.1 200 OK"
+
+0: cached, but requires re-validation
+1: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:26 2024
+1: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+1: in cache, but expired at Mon Feb 26 09:35:20 2024
+
+1: in cache, requires validation
 1: Received "HTTP/1.1 200 OK" from httpbin.org
+1: cached, but requires re-validation
 1: Responding "HTTP/1.1 200 OK
-3: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:02:58 2024
-3: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
-3: Received "HTTP/1.1 200 OK" from httpbin.org
-3: Responding "HTTP/1.1 200 OK
-5: "CONNECT www.google.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:01 2024
-5: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+2: "CONNECT safebrowsing.googleapis.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:33 2024
+2: Requesting "CONNECT safebrowsing.googleapis.com:443 HTTP/1.1" from safebrowsing.googleapis.com
+2: Responding "HTTP/1.1 200 OK"
+3: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:43 2024
+3: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+3: Responding "HTTP/1.1 200 OK"
+4: "CONNECT contile-images.services.mozilla.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:43 2024
+5: "CONNECT contile-images.services.mozilla.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:43 2024
+5: Requesting "CONNECT contile-images.services.mozilla.com:443 HTTP/1.1" from contile-images.services.mozilla.com
 5: Responding "HTTP/1.1 200 OK"
-4: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:08 2024
-4: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
-4: Received "HTTP/1.1 200 OK" from httpbin.org
-4: Responding "HTTP/1.1 200 OK
-6: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:10 2024
-6: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
-6: Received "HTTP/1.1 200 OK" from httpbin.org
-6: Responding "HTTP/1.1 200 OK
+5: Requesting "CONNECT contile-images.services.mozilla.com:443 HTTP/1.1" from contile-images.services.mozilla.com
+5: Responding "HTTP/1.1 200 OK"
+6: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:46 2024
+7: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:46 2024
+9: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:46 2024
+9: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+9: Responding "HTTP/1.1 200 OK"
+9: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+9: in cache, valid 
+9: Responding "HTTP/1.1 200 OK
+9: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+9: Responding "HTTP/1.1 200 OK"
+19: Tunnel closed
+19: Tunnel closed
+9: " " from 76.36.238.125 @ Mon Feb 26 04:35:46 2024
+9: Requesting " " from 
+10: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:47 2024
+10: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+10: Responding "HTTP/1.1 200 OK"
+13: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:50 2024
+13: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:50 2024
+13: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+13: Responding "HTTP/1.1 200 OK"
+13: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+13: Responding "HTTP/1.1 200 OK"
+19: Tunnel closed
+14: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:35:53 2024
+14: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+14: Responding "HTTP/1.1 200 OK"
+15: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:02 2024
+15: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+15: Responding "HTTP/1.1 200 OK"
+9: Tunnel closed
+9: Tunnel closed
+16: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:04 2024
+16: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+16: Responding "HTTP/1.1 200 OK"
+30: Tunnel closed
+30: Tunnel closed
+17: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:20 2024
+17: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+17: in cache, valid 
+17: Responding "HTTP/1.1 200 OK
 7: Tunnel closed
-7: "POST http://httpbin.org/post HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:13 2024
-8: "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from 76.36.239.174 @ Sun Feb 25 06:03:13 2024
-8: Requesting "CONNECT optimizationguide-pa.googleapis.com:443 HTTP/1.1" from optimizationguide-pa.googleapis.com
-8: Responding "HTTP/1.1 200 OK"
-7: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
-7: Received "HTTP/1.1 200 OK" from httpbin.org
-7: Responding "HTTP/1.1 200 OK
+7: Tunnel closed
+7: Tunnel closed
+7: Tunnel closed
+7: Tunnel closed
+17: ERROR Invalid receive!
+23: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:21 2024
+23: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:21 2024
+23: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:21 2024
+23: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+23: Responding "HTTP/1.1 200 OK"
+23: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+23: Responding "HTTP/1.1 200 OK"
+23: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+23: Responding "HTTP/1.1 200 OK"
+23: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:21 2024
+23: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+23: Responding "HTTP/1.1 200 OK"
+24: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:33 2024
+24: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+24: in cache, valid 
+24: Responding "HTTP/1.1 200 OK
+25: "CONNECT developer.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:41 2024
+25: Requesting "CONNECT developer.mozilla.org:443 HTTP/1.1" from developer.mozilla.org
+25: Responding "HTTP/1.1 200 OK"
+26: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:46 2024
+26: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+26: in cache, valid 
+26: Responding "HTTP/1.1 200 OK
+27: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:53 2024
+27: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+27: in cache, valid 
+27: Responding "HTTP/1.1 200 OK
+27: ERROR Invalid receive!
+27: ERROR Invalid receive!
+35: Tunnel closed
+35: Tunnel closed
+35: Tunnel closed
+35: Tunnel closed
+31: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:54 2024
+31: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:54 2024
+31: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:54 2024
+31: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+31: Responding "HTTP/1.1 200 OK"
+31: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+31: Responding "HTTP/1.1 200 OK"
+33: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:54 2024
+33: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+33: Responding "HTTP/1.1 200 OK"
+33: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+33: Responding "HTTP/1.1 200 OK"
+36: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:36:56 2024
+36: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+36: in cache, valid 
+36: Responding "HTTP/1.1 200 OK
+36: ERROR Invalid receive!
+36: ERROR Invalid receive!
+37: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:05 2024
+37: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+37: in cache, valid 
+37: Responding "HTTP/1.1 200 OK
+38: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:05 2024
+38: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+38: Responding "HTTP/1.1 200 OK"
+39: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:08 2024
+39: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+39: in cache, valid 
+39: Responding "HTTP/1.1 200 OK
+40: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:12 2024
+40: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+40: Responding "HTTP/1.1 200 OK"
+45: Tunnel closed
+45: Tunnel closed
+41: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:16 2024
+41: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+41: Responding "HTTP/1.1 200 OK"
+43: Tunnel closed
+43: Tunnel closed
+42: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:26 2024
+42: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+42: Responding "HTTP/1.1 200 OK"
+34: Tunnel closed
+34: Tunnel closed
+42: ERROR Invalid receive!
+34: Tunnel closed
+34: Tunnel closed
+42: ERROR Invalid receive!
+44: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:27 2024
+44: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+44: Responding "HTTP/1.1 200 OK"
+45: "CONNECT spocs.getpocket.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:44 2024
+46: "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:37:44 2024
+46: Requesting "CONNECT spocs.getpocket.com:443 HTTP/1.1" from spocs.getpocket.com
+46: Responding "HTTP/1.1 200 OK"
+46: Requesting "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from firefox-api-proxy.cdn.mozilla.net
+46: Responding "HTTP/1.1 200 OK"
+47: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:38:12 2024
+47: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+47: in cache, but expired at Mon Feb 26 09:37:19 2024
+
+47: in cache, requires validation
+47: Received "HTTP/1.1 200 OK" from httpbin.org
+47: cached, but requires re-validation
+47: Responding "HTTP/1.1 200 OK
+47: ERROR Invalid receive!
+45: Tunnel closed
+48: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:38:22 2024
+48: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+48: Responding "HTTP/1.1 200 OK"
+47: Tunnel closed
+47: Tunnel closed
+49: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Mon Feb 26 04:38:25 2024
+49: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+49: in cache, valid 
+49: Responding "HTTP/1.1 200 OK
+36: Tunnel closed
+36: Tunnel closed
