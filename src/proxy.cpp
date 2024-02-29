@@ -45,11 +45,11 @@ void Proxy::start() {
         pthread_t thread;
 
         pthread_mutex_lock(&mutex);
-        User user = User(user_fd, thread_id, ip);
+        User* user = new User(user_fd, thread_id, ip);
         thread_id++;
         pthread_mutex_unlock(&mutex);
 
-        pthread_create(&thread, NULL, handleRequest, &user);
+        pthread_create(&thread, NULL, handleRequest, user);
     }
 }
 
@@ -58,7 +58,7 @@ void* Proxy::handleRequest(void* userInfo) {
     // Cache* cache = new Cache(10);
     vector<char> message(MAX_SIZE, 0);
     int status = recv(user->getClientFd(), message.data(), message.size(), 0);
-    //int status = recv_all(user->getClientFd(), message);
+    // int status = recv_all(user->getClientFd(), message);
     if (status <= 0) {
         pthread_mutex_lock(&mutex);
         logDoc << user->getThreadId() << ": ERROR Invalid receive!" << endl;
@@ -94,11 +94,17 @@ void* Proxy::handleRequest(void* userInfo) {
         handlePost(user->getClientFd(), server_fd, user->getThreadId(), message, hostname);
     }
     else {
-
+        string msg = "HTTP/1.1 400 Bad Request\r\n\r\n";
+        vector<char> msg_to_user(msg.begin(), msg.end());
+        send(user->getClientFd(), msg_to_user.data(), msg_to_user.size(), 0);
+        pthread_mutex_lock(&mutex);
+        logDoc << user->getThreadId() << ": Responding \"HTTP/1.1 400 Bad Request\"" << std::endl;
+        pthread_mutex_unlock(&mutex);
     }
     close(user->getClientFd());
     delete request;
     delete proxy_client;
+    delete user;
     return NULL;
 }
 void Proxy::handleConnect(int user_fd, int server_fd, int thread_id) {
@@ -243,7 +249,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
 
             send(user_fd, cache_res_msg.data(), cache_res_msg.size(), 0);
             pthread_mutex_lock(&mutex);
-            logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+            // logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+            logDoc << thread_id << ": Responding \"" << cache_res.getResponse() << endl;
             pthread_mutex_unlock(&mutex);
         }
         else {
@@ -277,7 +284,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
                 // 304, send response in cache to user
                 send(user_fd, cache_res_msg.data(), cache_res_msg.size(), 0);
                 pthread_mutex_lock(&mutex);
-                logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+                logDoc << thread_id << ": Responding \"" << cache_res.getResponse() << endl;
+                // logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
                 pthread_mutex_unlock(&mutex);
             }
             else if (status == "200") {
@@ -314,7 +322,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
 
                 send(user_fd, res.data(), res.size(), 0);
                 pthread_mutex_lock(&mutex);
-                logDoc << thread_id << ": Responding \"" << recv_res.getFirstLine() << endl;
+                logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
+                // logDoc << thread_id << ": Responding \"" << recv_res.getFirstLine() << endl;
                 pthread_mutex_unlock(&mutex);
             }
         }
@@ -328,13 +337,13 @@ std::string Proxy::getCurrentTime() {
     return asctime(time_info);
 }
 
-int Proxy::recv_all(int _fd, vector<char> & msg) {
-    int recv_len = recv(_fd, msg.data(), msg.size(),0);
+int Proxy::recv_all(int _fd, vector<char>& msg) {
+    int recv_len = recv(_fd, msg.data(), msg.size(), 0);
     if (recv_len <= 0) {
         std::cerr << "Error in recv! 1st round" << std::endl;
         return -1;
     }
-    else{
+    else {
         std::string recv_str = msg.data();
         Response res(recv_str);
         if (res.isChunked()) {
@@ -356,7 +365,7 @@ int Proxy::recv_all(int _fd, vector<char> & msg) {
         }
         else {  // no chunk, has content len
             std::cout << "no chunk" << std::endl;
-            while(recv_len < res.getContentLength()) {
+            while (recv_len < res.getContentLength()) {
                 msg.resize(recv_len + MAX_SIZE);
                 int len = recv(_fd, &msg.data()[recv_len], MAX_SIZE, 0);
                 if (len > 0) {
