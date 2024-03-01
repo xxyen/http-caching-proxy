@@ -1,267 +1,7 @@
-0: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-1: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-0: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
-3: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-2: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-4: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-1: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-1: Responding "HTTP/1.1 200 OK"
-3: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-3: Responding "HTTP/1.1 200 OK"
-2: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-2: Responding "HTTP/1.1 200 OK"
-4: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-4: Responding "HTTP/1.1 200 OK"
-5: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-5: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-5: Responding "HTTP/1.1 200 OK"
-6: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:58 2024
-6: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-6: Responding "HTTP/1.1 200 OK"
+0: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:00:58 2024
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
 0: not in cache
-0: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1
-Host: detectportal.firefox.com
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Cache-Control: no-cache
-Pragma: no-cache
-Connection: keep-alive
-
-" from detectportal.firefox.com
-0: Responding "HTTP/1.1 200 OK
-Server: nginx
-Content-Length: 90
-Via: 1.1 google
-Date: Thu, 29 Feb 2024 06:12:46 GMT
-Age: 61333
-Content-Type: text/html
-Cache-Control: public,must-revalidate,max-age=0,s-maxage=3600
-
-<meta http-equiv="refresh" content="0;url=https://support.mozilla.org/kb/captive-portal"/>
-0: cached, but requires re-validation
-7: "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:14:59 2024
-7: Requesting "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1" from detectportal.firefox.com
-6: Tunnel closed
-8: Tunnel closed
-10: Tunnel closed
-11: Tunnel closed
-10: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-8: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-7: not in cache
-7: Requesting "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1
-Host: detectportal.firefox.com
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Pragma: no-cache
-Cache-Control: no-cache
-
-" from detectportal.firefox.com
-11: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-9: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-7: Responding "HTTP/1.1 200 OK
-Server: nginx
-Content-Length: 8
-Via: 1.1 google
-Date: Thu, 29 Feb 2024 00:04:15 GMT
-Age: 83445
-Content-Type: text/plain
-Cache-Control: public,must-revalidate,max-age=0,s-maxage=3600
-
-success
-
-7: cached, but requires re-validation
-11: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-10: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-11: Responding "HTTP/1.1 200 OK"
-10: Responding "HTTP/1.1 200 OK"
-9: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-9: Responding "HTTP/1.1 200 OK"
-8: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-8: Responding "HTTP/1.1 200 OK"
-14: Tunnel closed
-12: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-12: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-12: Responding "HTTP/1.1 200 OK"
-5: Tunnel closed
-6: Tunnel closed
-9: Tunnel closed
-10: Tunnel closed
-13: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-14: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-15: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-16: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-13: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-13: Responding "HTTP/1.1 200 OK"
-14: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-14: Responding "HTTP/1.1 200 OK"
-15: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-15: Responding "HTTP/1.1 200 OK"
-16: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-16: Responding "HTTP/1.1 200 OK"
-9: Tunnel closed
-5: Tunnel closed
-6: Tunnel closed
-18: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-17: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-19: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-17: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-17: Responding "HTTP/1.1 200 OK"
-19: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-19: Responding "HTTP/1.1 200 OK"
-18: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-18: Responding "HTTP/1.1 200 OK"
-5: Tunnel closed
-6: Tunnel closed
-7: Tunnel closed
-21: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-22: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-20: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:00 2024
-20: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-21: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-22: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-22: Responding "HTTP/1.1 200 OK"
-21: Responding "HTTP/1.1 200 OK"
-20: Responding "HTTP/1.1 200 OK"
-6: Tunnel closed
-23: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-23: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-23: Responding "HTTP/1.1 200 OK"
-9: Tunnel closed
-5: Tunnel closed
-24: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-29: "CONNECT spocs.getpocket.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-33: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-34: "CONNECT token.services.mozilla.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-31: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-32: "CONNECT aus5.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-30: "CONNECT profile.accounts.firefox.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-36: "CONNECT api.accounts.firefox.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-35: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-39: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-40: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-41: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-38: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-37: "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-28: "CONNECT contile.services.mozilla.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-27: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-26: "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-25: "CONNECT api.accounts.firefox.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-24: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-24: Responding "HTTP/1.1 200 OK"
-30: Requesting "CONNECT profile.accounts.firefox.com:443 HTTP/1.1" from profile.accounts.firefox.com
-30: Responding "HTTP/1.1 200 OK"
-37: Requesting "CONNECT firefox.settings.services.mozilla.com:443 HTTP/1.1" from firefox.settings.services.mozilla.com
-37: Responding "HTTP/1.1 200 OK"
-41: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
-41: Responding "HTTP/1.1 200 OK"
-27: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-27: Responding "HTTP/1.1 200 OK"
-26: Requesting "CONNECT content-signature-2.cdn.mozilla.net:443 HTTP/1.1" from content-signature-2.cdn.mozilla.net
-26: Responding "HTTP/1.1 200 OK"
-36: Requesting "CONNECT api.accounts.firefox.com:443 HTTP/1.1" from api.accounts.firefox.com
-36: Responding "HTTP/1.1 200 OK"
-25: Requesting "CONNECT api.accounts.firefox.com:443 HTTP/1.1" from api.accounts.firefox.com
-25: Responding "HTTP/1.1 200 OK"
-32: Requesting "CONNECT aus5.mozilla.org:443 HTTP/1.1" from aus5.mozilla.org
-32: Responding "HTTP/1.1 200 OK"
-34: Requesting "CONNECT token.services.mozilla.com:443 HTTP/1.1" from token.services.mozilla.com
-34: Responding "HTTP/1.1 200 OK"
-28: Requesting "CONNECT contile.services.mozilla.com:443 HTTP/1.1" from contile.services.mozilla.com
-28: Responding "HTTP/1.1 200 OK"
-7: Tunnel closed
-14: Tunnel closed
-6: Tunnel closed
-45: "CONNECT safebrowsing.googleapis.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-44: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-42: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-43: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-29: Requesting "CONNECT spocs.getpocket.com:443 HTTP/1.1" from spocs.getpocket.com
-29: Responding "HTTP/1.1 200 OK"
-45: Requesting "CONNECT safebrowsing.googleapis.com:443 HTTP/1.1" from safebrowsing.googleapis.com
-45: Responding "HTTP/1.1 200 OK"
-44: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-44: Responding "HTTP/1.1 200 OK"
-43: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-43: Responding "HTTP/1.1 200 OK"
-42: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-42: Responding "HTTP/1.1 200 OK"
-31: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
-31: Responding "HTTP/1.1 200 OK"
-40: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
-40: Responding "HTTP/1.1 200 OK"
-38: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
-38: Responding "HTTP/1.1 200 OK"
-33: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
-33: Responding "HTTP/1.1 200 OK"
-39: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
-39: Responding "HTTP/1.1 200 OK"
-35: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
-35: Responding "HTTP/1.1 200 OK"
-6: Tunnel closed
-7: Tunnel closed
-46: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-47: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-47: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-47: Responding "HTTP/1.1 200 OK"
-46: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-46: Responding "HTTP/1.1 200 OK"
-15: Tunnel closed
-36: Tunnel closed
-6: Tunnel closed
-48: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-50: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-49: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:01 2024
-50: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-50: Responding "HTTP/1.1 200 OK"
-48: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-48: Responding "HTTP/1.1 200 OK"
-49: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-49: Responding "HTTP/1.1 200 OK"
-15: Tunnel closed
-6: Tunnel closed
-7: Tunnel closed
-51: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:03 2024
-52: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:03 2024
-53: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:03 2024
-52: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-52: Responding "HTTP/1.1 200 OK"
-53: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-53: Responding "HTTP/1.1 200 OK"
-51: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-51: Responding "HTTP/1.1 200 OK"
-51: Tunnel closed
-7: Tunnel closed
-6: Tunnel closed
-54: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:03 2024
-56: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:03 2024
-55: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:03 2024
-54: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-54: Responding "HTTP/1.1 200 OK"
-56: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-56: Responding "HTTP/1.1 200 OK"
-55: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-55: Responding "HTTP/1.1 200 OK"
-7: Tunnel closed
-16: Tunnel closed
-8: Tunnel closed
-15: Tunnel closed
-57: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:04 2024
-58: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:04 2024
-58: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-58: Responding "HTTP/1.1 200 OK"
-57: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
-6: Tunnel closed
-13: Tunnel closed
-59: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:05 2024
-59: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-59: Responding "HTTP/1.1 200 OK"
-57: not in cache
-57: Requesting "GET http://httpbin.org/forms/post HTTP/1.1
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1
 Host: httpbin.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
@@ -271,8 +11,8 @@ Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 
 " from httpbin.org
-57: Responding "HTTP/1.1 200 OK
-Date: Thu, 29 Feb 2024 23:15:05 GMT
+0: Responding "HTTP/1.1 200 OK
+Date: Fri, 01 Mar 2024 00:00:58 GMT
 Content-Type: text/html; charset=utf-8
 Content-Length: 1397
 Connection: keep-alive
@@ -310,7 +50,7 @@ Access-Control-Allow-Credentials: true
   </body>
 </html>HTTP/1.1 400 Bad Request
 Server: awselb/2.0
-Date: Thu, 29 Feb 2024 23:15:05 GMT
+Date: Fri, 01 Mar 2024 00:00:58 GMT
 Content-Type: text/html
 Content-Length: 122
 Connection: close
@@ -322,59 +62,34 @@ Connection: close
 </body>
 </html>
 
-57: cached, but requires re-validation
-7: Tunnel closed
-35: Tunnel closed
-60: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:09 2024
-60: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
-60: Responding "HTTP/1.1 200 OK"
-61: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:10 2024
-61: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
-61: not in cache
-61: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1
-Host: www.httpwatch.com
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
+0: cached, but requires re-validation
+1: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:00 2024
+3: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:00 2024
+4: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:00 2024
+2: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:00 2024
+5: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:00 2024
+6: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:00 2024
+5: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+5: Responding "HTTP/1.1 200 OK"
+2: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+2: Responding "HTTP/1.1 200 OK"
+6: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+6: Responding "HTTP/1.1 200 OK"
+4: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+4: Responding "HTTP/1.1 200 OK"
+3: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+3: Responding "HTTP/1.1 200 OK"
+1: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+1: Responding "HTTP/1.1 200 OK"
+7: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:02 2024
+7: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+7: in cache, but expired at Fri Mar  1 05:00:58 2024
 
-" from www.httpwatch.com
-11: Tunnel closed
-62: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:11 2024
-62: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-62: Responding "HTTP/1.1 200 OK"
-63: "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:13 2024
-64: "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:13 2024
-65: "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:13 2024
-65: Requesting "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from cdn.jsdelivr.net
-65: Responding "HTTP/1.1 200 OK"
-64: Requesting "CONNECT ublockorigin.pages.dev:443 HTTP/1.1" from ublockorigin.pages.dev
-64: Responding "HTTP/1.1 200 OK"
-63: Requesting "CONNECT cdn.jsdelivr.net:443 HTTP/1.1" from cdn.jsdelivr.net
-63: Responding "HTTP/1.1 200 OK"
-61: Responding "HTTP/1.1 200 OK
-Content-Type: image/jpeg; charset=utf-8
-Date: Thu, 29 Feb 2024 23:15:10 GMT
-Server: Microsoft-IIS/10.0
-Cache-Control: no-cache, no-store
-Expires: -1
-Pragma: no-cache
-Trailer: X-HttpWatch-Sample
-Transfer-Encoding: chunked
-X-AspNet-Version: 4.0.30319
-X-Powered-By: ASP.NET
-Arr-Disable-Session-Affinity: True
-
-400
-ÿØÿá
-61: not cacheable because cache control is no store
-66: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:16 2024
-66: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
-66: in cache, valid 
-66: Responding "HTTP/1.1 200 OK
-Date: Thu, 29 Feb 2024 23:15:05 GMT
+7: in cache, requires validation
+7: Received "HTTP/1.1 200 OK" from httpbin.org
+7: cached, but requires re-validation
+7: Responding "HTTP/1.1 200 OK
+Date: Fri, 01 Mar 2024 00:01:02 GMT
 Content-Type: text/html; charset=utf-8
 Content-Length: 1397
 Connection: keep-alive
@@ -410,104 +125,14 @@ Access-Control-Allow-Credentials: true
    <p><button>Submit order</button></p>
   </form>
   </body>
-</html>HTTP/1.1 400 Bad Request
-Server: awselb/2.0
-Date: Thu, 29 Feb 2024 23:15:05 GMT
-Content-Type: text/html
-Content-Length: 122
-Connection: close
-
-<html>
-<head><title>400 Bad Request</title></head>
-<body>
-<center><h1>400 Bad Request</h1></center>
-</body>
 </html>
-
-13: Tunnel closed
-67: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:18 2024
-67: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
-67: Responding "HTTP/1.1 200 OK"
-68: "CONNECT www.httpwatch.com:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:19 2024
-68: Requesting "CONNECT www.httpwatch.com:443 HTTP/1.1" from www.httpwatch.com
-68: Responding "HTTP/1.1 200 OK"
-6: Tunnel closed
-69: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:19 2024
-69: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
-69: Responding "HTTP/1.1 200 OK"
-70: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Thu Feb 29 23:15:19 2024
-70: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
-70: in cache, valid 
-70: Responding "HTTP/1.1 200 OK
-Date: Thu, 29 Feb 2024 23:15:05 GMT
-Content-Type: text/html; charset=utf-8
-Content-Length: 1397
-Connection: keep-alive
-Server: gunicorn/19.9.0
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Credentials: true
-
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-  <!-- Example form from HTML5 spec http://www.w3.org/TR/html5/forms.html#writing-a-form's-user-interface -->
-  <form method="post" action="/post">
-   <p><label>Customer name: <input name="custname"></label></p>
-   <p><label>Telephone: <input type=tel name="custtel"></label></p>
-   <p><label>E-mail address: <input type=email name="custemail"></label></p>
-   <fieldset>
-    <legend> Pizza Size </legend>
-    <p><label> <input type=radio name=size value="small"> Small </label></p>
-    <p><label> <input type=radio name=size value="medium"> Medium </label></p>
-    <p><label> <input type=radio name=size value="large"> Large </label></p>
-   </fieldset>
-   <fieldset>
-    <legend> Pizza Toppings </legend>
-    <p><label> <input type=checkbox name="topping" value="bacon"> Bacon </label></p>
-    <p><label> <input type=checkbox name="topping" value="cheese"> Extra Cheese </label></p>
-    <p><label> <input type=checkbox name="topping" value="onion"> Onion </label></p>
-    <p><label> <input type=checkbox name="topping" value="mushroom"> Mushroom </label></p>
-   </fieldset>
-   <p><label>Preferred delivery time: <input type=time min="11:00" max="21:00" step="900" name="delivery"></label></p>
-   <p><label>Delivery instructions: <textarea name="comments"></textarea></label></p>
-   <p><button>Submit order</button></p>
-  </form>
-  </body>
-</html>HTTP/1.1 400 Bad Request
-Server: awselb/2.0
-Date: Thu, 29 Feb 2024 23:15:05 GMT
-Content-Type: text/html
-Content-Length: 122
-Connection: close
-
-<html>
-<head><title>400 Bad Request</title></head>
-<body>
-<center><h1>400 Bad Request</h1></center>
-</body>
-</html>
-
-16: Tunnel closed
-11: Tunnel closed
-35: Tunnel closed
-25: Tunnel closed
-14: Tunnel closed
-27: Tunnel closed
-32: Tunnel closed
-29: Tunnel closed
-24: Tunnel closed
-34: Tunnel closed
-33: Tunnel closed
-12: Tunnel closed
-9: Tunnel closed
-28: Tunnel closed
-18: Tunnel closed
-23: Tunnel closed
-10: Tunnel closed
-30: Tunnel closed
+8: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 00:01:02 2024
+8: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+8: Responding "HTTP/1.1 200 OK"
 19: Tunnel closed
+8: Tunnel closed
+10: Tunnel closed
 7: Tunnel closed
-15: Tunnel closed
+6: Tunnel closed
+9: Tunnel closed
 5: Tunnel closed

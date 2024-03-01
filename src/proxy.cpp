@@ -1,7 +1,5 @@
 #include "proxy.hpp"
 #include "user.hpp"
-// #include "request.hpp"
-// #include "response.hpp"
 #include <iostream>
 #include <cstring>
 #include <pthread.h>
@@ -15,7 +13,7 @@ std::ofstream logDoc("proxy.log");
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
-Cache cache = Cache(10);
+Cache cache = Cache(20);
 
 Proxy::Proxy(const char* port) : port(port) {}
 

@@ -6,24 +6,34 @@
 
 Response Cache::get(std::string key) {
     if (cache.find(key) != cache.end()) {
+        order.remove(key);
+        order.push_front(key);
         return cache[key];
     }
     else {
         return Response("");
     }
-
 }
 void Cache::put(std::string key, Response res) {
+    if (cache.find(key) != cache.end()) {
+        order.remove(key);
+    }
+    order.push_front(key);
     cache[key] = res;
+    if (cache.size() > capacity) {
+        std::string tmpKey = order.back();
+        cache.erase(tmpKey);
+        order.pop_back();
+    }
 }
-void Cache::revalidate(Response & res, Request & req, int server_fd) {
+void Cache::revalidate(Response& res, Request& req, int server_fd) {
     std::string etag = res.getEtag();
     std::string last_modified = res.getLastModified();
     // if (etag == "" && last_modified == "") {
     //     return true;
     // }
     // std::cout << "req header (in revalidate()): " << req_header << std::endl << std::endl;
-    
+
     std::string new_msg = req.getHeader();
     //std::cout << "original_msg: " << new_msg << std::endl << std::endl;
     //std::cout << "original_response: " << res.getResponse() << std::endl << std::endl;
