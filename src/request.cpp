@@ -24,7 +24,7 @@ void Request::parse(const std::string& raw_request) {
             size_t host_line_end;
             host_line_end = host.find_first_of("\r\n");
             if (host.find(':') != std::string::npos) {
-                //port = host.substr(host.find(':') + 1, host_line_end);
+                // port = host.substr(host.find(':') + 1, host_line_end);
                 port = "80";
                 host = host.substr(0, host.find(':'));
             }
@@ -69,8 +69,8 @@ std::string Request::getBody() const { return body; }
 std::string Request::getContentLength() const { return content_length; }
 std::string Request::getPort() const { return port; }
 std::string Request::getCacheControl() const { return cache_control; }
-std::string Request::getHeader() const { 
+std::string Request::getHeader() const {
     size_t end = request.find("\r\n\r\n");
-    return request.substr(0, end); 
+    return request.substr(0, end);
 }
 

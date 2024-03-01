@@ -1,0 +1,7 @@
+1. When we tested the socket connection, it couldn't get the correct hostname and port. After carefully checking the
+request parsing function, we found that the hostname was parsed incorrectly. We modified it, and it worked then.
+2. The response couldn't be retrieved from cache, because the status of the request wasn't be parsed correctly.
+After we fixed the status parsing function, cache can work normally. 
+3. When we tried to run the proxy to test daemon codes, the socket connection establishment failed. After checking
+the running processes, we realized there's already a socket connection on the same port after our previous testing on 
+daemon. So we killed this ongoing process, and ran tests successfully.

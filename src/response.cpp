@@ -19,7 +19,7 @@ void Response::parse(const std::string& raw_response)
             size_t pos = first_line_tmp.find_first_of("\r\n");
             first_line = first_line_tmp.substr(0, pos);
             std::istringstream line_stream(line);
-            line_stream >> http_version >> status_code >> status_msg; // Assumes status code is the second token in the line
+            line_stream >> http_version >> status_code >> status_msg;
             first_line_parsed = true;
         }
         else if (line.find("Content-Length:") != std::string::npos) {
@@ -69,7 +69,7 @@ void Response::parse(const std::string& raw_response)
         }
     }
 
-    // Read the body if Transfer-Encoding is not chunked (simplified handling)
+    // Read the body if Transfer-Encoding is not chunked
     if (transfer_encoding.find("chunked") == std::string::npos && content_length > 0) {
         char* buffer = new char[content_length + 1];
         response_stream.read(buffer, content_length);

@@ -31,6 +31,12 @@ void Proxy::start() {
     int thread_id = 0;
     int user_fd;
     std::string ip;
+
+    if (daemon(1, 0) == -1) {
+        std::cout << "Error: create daemon failed!" << std::endl;
+        return;
+    }
+
     while (true) {
         user_fd = server.acceptClient(&ip);
         if (user_fd < 0) {
@@ -140,8 +146,8 @@ void Proxy::handleConnect(int user_fd, int server_fd, int thread_id) {
 void Proxy::handlePost(int user_fd, int server_fd, int thread_id, vector<char> message, const char* hostname) {
     send(server_fd, message.data(), message.size(), 0);
     vector<char> response(MAX_SIZE, 0);
-    //int len = recv_all(server_fd, response);
-    int len = recv(server_fd, response.data(), response.size(), 0);
+    int len = recv_all(server_fd, response);
+    // int len = recv(server_fd, response.data(), response.size(), 0);
     if (len > 0) {
         std::string res_str = response.data();
         Response res(res_str);
@@ -151,7 +157,7 @@ void Proxy::handlePost(int user_fd, int server_fd, int thread_id, vector<char> m
         send(user_fd, response.data(), response.size(), 0);
 
         pthread_mutex_lock(&mutex);
-        logDoc << thread_id << ": Responding \"" << res.getFirstLine() << endl;
+        logDoc << thread_id << ": Responding \"" << res.getResponse() << endl;
         pthread_mutex_unlock(&mutex);
     }
     else {

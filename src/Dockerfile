@@ -4,4 +4,4 @@ RUN mkdir /var/log/erss
 add . /var/log/erss/
 WORKDIR /var/log/erss
 
-ENTRYPOINT ["./testparse"]
+ENTRYPOINT ["./main"]
