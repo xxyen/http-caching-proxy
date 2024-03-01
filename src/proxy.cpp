@@ -9,8 +9,8 @@
 
 #define MAX_SIZE 65536
 
-// std::ofstream logDoc("/var/log/erss/proxy.log");
-std::ofstream logDoc("proxy.log");
+std::ofstream logDoc("/var/log/erss/proxy.log");
+// std::ofstream logDoc("proxy.log");
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -32,6 +32,12 @@ void Proxy::start() {
     int thread_id = 0;
     int user_fd;
     std::string ip;
+
+    // if (daemon(1, 0) == -1) {
+    //     std::cout << "Error: create daemon failed!" << std::endl;
+    //     return;
+    // }
+
     while (true) {
         user_fd = server.acceptClient(&ip);
         if (user_fd < 0) {
@@ -156,7 +162,7 @@ void Proxy::handlePost(int user_fd, int server_fd, int thread_id, vector<char> m
         logDoc << thread_id << ": Responding \"" << res.getFirstLine() << endl;
         pthread_mutex_unlock(&mutex);
     }
-    catch (MyException &e) {
+    catch (MyException& e) {
         std::cerr << e.what() << std::endl;
         return;
     }
@@ -196,7 +202,7 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
         pthread_mutex_unlock(&mutex);
         send(server_fd, message.data(), message.size(), 0);
         pthread_mutex_lock(&mutex);
-        logDoc << thread_id << ": Requesting \"" << req_parse.getRequest() << "\" from " << hostname << std::endl;
+        logDoc << thread_id << ": Requesting \"" << req_parse.getRequestLine() << "\" from " << hostname << std::endl;
         pthread_mutex_unlock(&mutex);
         vector<char> res(MAX_SIZE, 0);
         // get response from server
@@ -205,7 +211,7 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
         try {
             recv_all(server_fd, res);
         }
-        catch (MyException &e) {
+        catch (MyException& e) {
             std::cerr << e.what() << std::endl;
             return;
         }
@@ -216,7 +222,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
         // send response to user
         send(user_fd, res.data(), res.size(), 0);
         pthread_mutex_lock(&mutex);
-        logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
+        logDoc << thread_id << ": Responding \"" << recv_res.getFirstLine() << endl;
+        // logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
         pthread_mutex_unlock(&mutex);
 
         // check if it is cacheable
@@ -269,8 +276,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
 
             send(user_fd, cache_res_msg.data(), cache_res_msg.size(), 0);
             pthread_mutex_lock(&mutex);
-            // logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
-            logDoc << thread_id << ": Responding \"" << cache_res.getResponse() << endl;
+            logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+            // logDoc << thread_id << ": Responding \"" << cache_res.getResponse() << endl;
             pthread_mutex_unlock(&mutex);
         }
         else {
@@ -293,7 +300,7 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
             try {
                 recv_all(server_fd, res);
             }
-            catch (MyException &e) {
+            catch (MyException& e) {
                 std::cerr << e.what() << std::endl;
                 return;
             }
@@ -311,8 +318,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
                 // 304, send response in cache to user
                 send(user_fd, cache_res_msg.data(), cache_res_msg.size(), 0);
                 pthread_mutex_lock(&mutex);
-                logDoc << thread_id << ": Responding \"" << cache_res.getResponse() << endl;
-                // logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
+                // logDoc << thread_id << ": Responding \"" << cache_res.getResponse() << endl;
+                logDoc << thread_id << ": Responding \"" << cache_res.getFirstLine() << endl;
                 pthread_mutex_unlock(&mutex);
             }
             else if (status == "200") {
@@ -349,8 +356,8 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
 
                 send(user_fd, res.data(), res.size(), 0);
                 pthread_mutex_lock(&mutex);
-                logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
-                // logDoc << thread_id << ": Responding \"" << recv_res.getFirstLine() << endl;
+                // logDoc << thread_id << ": Responding \"" << recv_res.getResponse() << endl;
+                logDoc << thread_id << ": Responding \"" << recv_res.getFirstLine() << endl;
                 pthread_mutex_unlock(&mutex);
             }
         }

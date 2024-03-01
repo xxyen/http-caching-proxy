@@ -1,7 +1,7 @@
 FROM gcc:9
 
 RUN mkdir /var/log/erss
-add . /var/log/erss/
-WORKDIR /var/log/erss
-
+RUN mkdir /src
+WORKDIR /src
+ADD . /src/
 ENTRYPOINT ["./main"]

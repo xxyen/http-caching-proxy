@@ -1,0 +1,69 @@
+0: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:49 2024
+1: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:49 2024
+1: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+1: Responding "HTTP/1.1 200 OK"
+0: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+0: Responding "HTTP/1.1 200 OK"
+2: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:50 2024
+2: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+2: Responding "HTTP/1.1 200 OK"
+3: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:51 2024
+4: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:51 2024
+5: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:51 2024
+6: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:51 2024
+3: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+3: Responding "HTTP/1.1 200 OK"
+5: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+5: Responding "HTTP/1.1 200 OK"
+6: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+6: Responding "HTTP/1.1 200 OK"
+4: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+4: Responding "HTTP/1.1 200 OK"
+7: "CONNECT www.google.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:52 2024
+7: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+7: Responding "HTTP/1.1 200 OK"
+16: Tunnel closed
+5: Tunnel closed
+6: Tunnel closed
+8: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:54 2024
+9: "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:54 2024
+8: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+8: Responding "HTTP/1.1 200 OK"
+9: Requesting "CONNECT img-getpocket.cdn.mozilla.net:443 HTTP/1.1" from img-getpocket.cdn.mozilla.net
+9: Responding "HTTP/1.1 200 OK"
+10: "CONNECT www.google.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:58 2024
+10: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+10: Responding "HTTP/1.1 200 OK"
+8: Tunnel closed
+11: "CONNECT www.google.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:05:58 2024
+11: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+11: Responding "HTTP/1.1 200 OK"
+16: Tunnel closed
+7: Tunnel closed
+12: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:00 2024
+12: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+12: Responding "HTTP/1.1 200 OK"
+13: "CONNECT www.httpwatch.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:03 2024
+13: Requesting "CONNECT www.httpwatch.com:443 HTTP/1.1" from www.httpwatch.com
+13: Responding "HTTP/1.1 200 OK"
+14: "CONNECT www.google.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:06 2024
+14: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+14: Responding "HTTP/1.1 200 OK"
+16: Tunnel closed
+15: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:07 2024
+15: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+15: not in cache
+15: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+15: Responding "HTTP/1.1 200 OK
+15: cached, but requires re-validation
+8: Tunnel closed
+16: "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:10 2024
+16: Requesting "CONNECT incoming.telemetry.mozilla.org:443 HTTP/1.1" from incoming.telemetry.mozilla.org
+16: Responding "HTTP/1.1 200 OK"
+17: "POST http://httpbin.org/post HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:11 2024
+17: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+17: Received "HTTP/1.1 200 OK" from httpbin.org
+17: Responding "HTTP/1.1 200 OK
+18: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 22:06:17 2024
+18: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+18: Responding "HTTP/1.1 200 OK"

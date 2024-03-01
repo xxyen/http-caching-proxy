@@ -1,0 +1,39 @@
+---------------
+CONNECT
+---------------
+68: "CONNECT www.httpwatch.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:13:57 2024
+68: Requesting "CONNECT www.httpwatch.com:443 HTTP/1.1" from www.httpwatch.com
+68: Responding "HTTP/1.1 200 OK"
+
+86: "CONNECT www.google.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:14:16 2024
+86: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
+86: Responding "HTTP/1.1 200 OK"
+
+67: "CONNECT www.youtube.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:32 2024
+67: Requesting "CONNECT www.youtube.com:443 HTTP/1.1" from www.youtube.com
+67: Responding "HTTP/1.1 200 OK"
+
+---------------
+GET
+---------------
+62: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:24 2024
+62: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
+62: not in cache
+62: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
+62: Responding "HTTP/1.1 200 OK
+62: not cacheable because cache control is no store
+
+91: "GET http://httpbin.org/spec.json HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:54 2024
+91: Requesting "GET http://httpbin.org/spec.json HTTP/1.1" from httpbin.org
+91: not in cache
+91: Requesting "GET http://httpbin.org/spec.json HTTP/1.1" from httpbin.org
+91: Responding "HTTP/1.1 200 OK
+91: cached, but requires re-validation
+
+---------------
+POST
+---------------
+58: "POST http://httpbin.org/post HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:37:57 2024
+58: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+58: Received "HTTP/1.1 200 OK" from httpbin.org
+58: Responding "HTTP/1.1 200 OK
