@@ -33,10 +33,10 @@ void Proxy::start() {
     int user_fd;
     std::string ip;
 
-    // if (daemon(1, 0) == -1) {
-    //     std::cout << "Error: create daemon failed!" << std::endl;
-    //     return;
-    // }
+    if (daemon(1, 0) == -1) {
+        std::cout << "Error: create daemon failed!" << std::endl;
+        return;
+    }
 
     while (true) {
         user_fd = server.acceptClient(&ip);
@@ -164,6 +164,7 @@ void Proxy::handlePost(int user_fd, int server_fd, int thread_id, vector<char> m
     }
     catch (MyException& e) {
         std::cerr << e.what() << std::endl;
+        send502Response(user_fd, thread_id);
         return;
     }
     // if (len > 0) {
@@ -213,6 +214,7 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
         }
         catch (MyException& e) {
             std::cerr << e.what() << std::endl;
+            send502Response(user_fd, thread_id);
             return;
         }
 
@@ -302,6 +304,7 @@ void Proxy::handleGet(int user_fd, int server_fd, int thread_id, vector<char> me
             }
             catch (MyException& e) {
                 std::cerr << e.what() << std::endl;
+                send502Response(user_fd, thread_id);
                 return;
             }
             std::string recv_res_str = res.data();
@@ -413,3 +416,10 @@ int Proxy::recv_all(int _fd, vector<char>& msg) {
 
 }
 
+void Proxy::send502Response(int user_fd, int thread_id) {
+    const char* error502 = "HTTP/1.1 502 Bad Gateway\r\n\r\n";
+    send(user_fd, error502, sizeof(error502), 0);
+    pthread_mutex_lock(&mutex);
+    logDoc << thread_id << ": Responding " << error502 << endl;
+    pthread_mutex_unlock(&mutex);
+}
