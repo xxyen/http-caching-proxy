@@ -1,0 +1,89 @@
+0: "CONNECT push.services.mozilla.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:07:37 2024
+0: Requesting "CONNECT push.services.mozilla.com:443 HTTP/1.1" from push.services.mozilla.com
+0: Responding "HTTP/1.1 200 OK"
+1: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:07:42 2024
+1: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+1: not in cache
+1: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+1: Responding "HTTP/1.1 200 OK
+1: cached, but requires re-validation
+2: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:07:46 2024
+2: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+2: Responding "HTTP/1.1 200 OK"
+3: "GET http://httpbin.org/forms/post HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:07:48 2024
+3: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+3: in cache, valid 
+3: Responding "HTTP/1.1 200 OK
+4: "GET http://httpbin.org/favicon.ico HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:07:48 2024
+4: Requesting "GET http://httpbin.org/favicon.ico HTTP/1.1" from httpbin.org
+4: not in cache
+4: Requesting "GET http://httpbin.org/favicon.ico HTTP/1.1" from httpbin.org
+4: Responding "HTTP/1.1 404 NOT FOUND
+4: cached, but requires re-validation
+8: Tunnel closed
+5: "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:08:01 2024
+5: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+5: not in cache
+5: Requesting "GET http://detectportal.firefox.com/canonical.html HTTP/1.1" from detectportal.firefox.com
+5: Responding "HTTP/1.1 200 OK
+5: cached, but requires re-validation
+7: "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:08:01 2024
+7: Requesting "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1" from detectportal.firefox.com
+7: not in cache
+7: Requesting "GET http://detectportal.firefox.com/success.txt?ipv4 HTTP/1.1" from detectportal.firefox.com
+7: Responding "HTTP/1.1 200 OK
+7: cached, but requires re-validation
+6: ERROR Invalid receive!
+8: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:08:15 2024
+8: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
+8: not in cache
+8: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
+5: Tunnel closed
+8: Responding "HTTP/1.1 200 OK
+8: not cacheable because cache control is no store
+9: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:08:57 2024
+9: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+9: Responding "HTTP/1.1 200 OK"
+9: Tunnel closed
+12: "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:09:55 2024
+10: "CONNECT contile.services.mozilla.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:09:55 2024
+11: "CONNECT spocs.getpocket.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:09:55 2024
+10: Requesting "CONNECT contile.services.mozilla.com:443 HTTP/1.1" from contile.services.mozilla.com
+10: Responding "HTTP/1.1 200 OK"
+11: Requesting "CONNECT spocs.getpocket.com:443 HTTP/1.1" from spocs.getpocket.com
+11: Responding "HTTP/1.1 200 OK"
+12: Requesting "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from firefox-api-proxy.cdn.mozilla.net
+12: Responding "HTTP/1.1 200 OK"
+13: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:10:07 2024
+13: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+13: Responding "HTTP/1.1 200 OK"
+9: Tunnel closed
+6: Tunnel closed
+7: Tunnel closed
+14: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:11:17 2024
+14: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+14: Responding "HTTP/1.1 200 OK"
+5: Tunnel closed
+13: Tunnel closed
+15: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:12:28 2024
+15: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+15: Responding "HTTP/1.1 200 OK"
+6: Tunnel closed
+16: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:13:38 2024
+16: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+16: Responding "HTTP/1.1 200 OK"
+5: Tunnel closed
+17: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:14:51 2024
+17: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+17: Responding "HTTP/1.1 200 OK"
+18: "CONNECT spocs.getpocket.com:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:14:56 2024
+19: "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from 76.36.238.125 @ Sat Mar  2 04:14:56 2024
+19: Requesting "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from firefox-api-proxy.cdn.mozilla.net
+19: Responding "HTTP/1.1 200 OK"
+18: Requesting "CONNECT spocs.getpocket.com:443 HTTP/1.1" from spocs.getpocket.com
+18: Responding "HTTP/1.1 200 OK"
+6: Tunnel closed
+20: ERROR Invalid receive!
+21: ERROR Invalid receive!
+5: Tunnel closed
+9: Tunnel closed

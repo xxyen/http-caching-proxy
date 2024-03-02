@@ -14,3 +14,8 @@ proxy ports: 12345
 ```
 sudo docker-compose up
 ```
+
+## Introduction
+This is the http request caching policy.
+
+![caching_policy](/validation_logic.jpg)
