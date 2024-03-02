@@ -33,10 +33,10 @@ void Proxy::start() {
     int user_fd;
     std::string ip;
 
-    if (daemon(1, 0) == -1) {
-        std::cout << "Error: create daemon failed!" << std::endl;
-        return;
-    }
+    // if (daemon(1, 0) == -1) {
+    //     std::cout << "Error: create daemon failed!" << std::endl;
+    //     return;
+    // }
 
     while (true) {
         user_fd = server.acceptClient(&ip);

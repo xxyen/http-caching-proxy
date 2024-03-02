@@ -10,7 +10,7 @@ private:
     std::string date;
     std::string content_type;
     std::string expires;
-    int max_age;
+    int max_age = -1;
     std::string transfer_encoding;
     std::string header;
     std::string body;

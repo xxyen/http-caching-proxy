@@ -1,6 +1,10 @@
 ---------------
 CONNECT
 ---------------
+67: "CONNECT www.youtube.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:32 2024
+67: Requesting "CONNECT www.youtube.com:443 HTTP/1.1" from www.youtube.com
+67: Responding "HTTP/1.1 200 OK"
+
 68: "CONNECT www.httpwatch.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:13:57 2024
 68: Requesting "CONNECT www.httpwatch.com:443 HTTP/1.1" from www.httpwatch.com
 68: Responding "HTTP/1.1 200 OK"
@@ -9,13 +13,15 @@ CONNECT
 86: Requesting "CONNECT www.google.com:443 HTTP/1.1" from www.google.com
 86: Responding "HTTP/1.1 200 OK"
 
-67: "CONNECT www.youtube.com:443 HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:32 2024
-67: Requesting "CONNECT www.youtube.com:443 HTTP/1.1" from www.youtube.com
-67: Responding "HTTP/1.1 200 OK"
 
 ---------------
 GET
 ---------------
+
+*********************
+ chunked test (wait ~4s)
+ http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx
+*********************
 62: "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:24 2024
 62: Requesting "GET http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx HTTP/1.1" from www.httpwatch.com
 62: not in cache
@@ -23,17 +29,105 @@ GET
 62: Responding "HTTP/1.1 200 OK
 62: not cacheable because cache control is no store
 
-91: "GET http://httpbin.org/spec.json HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:34:54 2024
-91: Requesting "GET http://httpbin.org/spec.json HTTP/1.1" from httpbin.org
-91: not in cache
-91: Requesting "GET http://httpbin.org/spec.json HTTP/1.1" from httpbin.org
-91: Responding "HTTP/1.1 200 OK
-91: cached, but requires re-validation
+
+*********************
+ max-age=31536000 test
+ http://run.mocky.io/v3/157adf8c-dec8-4e1e-b6a3-9b2b556554b1
+ {
+  "Accept-Ranges": "bytes",
+  "Age": "293822",
+  "Cache-Control": "public, max-age=31536000",
+  "Content-Type": "txt/html",
+  "Date": "Fri, 1 Mar 2024 23:41:18 GMT"
+}
+*********************
+0: "GET http://run.mocky.io/v3/157adf8c-dec8-4e1e-b6a3-9b2b556554b1 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 00:36:34 2024
+0: Requesting "GET http://run.mocky.io/v3/157adf8c-dec8-4e1e-b6a3-9b2b556554b1 HTTP/1.1" from run.mocky.io
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/157adf8c-dec8-4e1e-b6a3-9b2b556554b1 HTTP/1.1" from run.mocky.io
+0: Responding "HTTP/1.1 200 OK
+0: cached, but requires re-validation
+1: "GET http://run.mocky.io/v3/157adf8c-dec8-4e1e-b6a3-9b2b556554b1 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 00:36:53 2024
+1: Requesting "GET http://run.mocky.io/v3/157adf8c-dec8-4e1e-b6a3-9b2b556554b1 HTTP/1.1" from run.mocky.io
+1: in cache, valid 
+1: Responding "HTTP/1.1 200 OK
+
+*********************
+expire test
+http://run.mocky.io/v3/a854e8ad-7e02-44a6-8d77-261bd4dfda2f
+{
+  "Accept-Ranges": "bytes",
+  "Age": "293822",
+  "Cache-Control": "public",
+  "Content-Type": "txt/html",
+  "Date": "Fri, 1 Mar 2024 23:41:18 GMT",
+  "Expires": "Sat, 2 Mar 2024 06:41:18 GMT"
+}
+*********************
+1: "GET http://run.mocky.io/v3/a854e8ad-7e02-44a6-8d77-261bd4dfda2f HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 00:53:15 2024
+1: Requesting "GET http://run.mocky.io/v3/a854e8ad-7e02-44a6-8d77-261bd4dfda2f HTTP/1.1" from run.mocky.io
+1: not in cache
+1: Requesting "GET http://run.mocky.io/v3/a854e8ad-7e02-44a6-8d77-261bd4dfda2f HTTP/1.1" from run.mocky.io
+1: Responding "HTTP/1.1 200 OK
+1: cached, expires at Sat, 2 Mar 2024 06:41:18 GMT
+2: "GET http://run.mocky.io/v3/a854e8ad-7e02-44a6-8d77-261bd4dfda2f HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 00:53:26 2024
+2: Requesting "GET http://run.mocky.io/v3/a854e8ad-7e02-44a6-8d77-261bd4dfda2f HTTP/1.1" from run.mocky.io
+2: in cache, valid 
+2: Responding "HTTP/1.1 200 OK
+
+*********************
+no-store test
+http://run.mocky.io/v3/d2599083-5d59-4e74-a996-1a7296ae29fa
+{
+  "Accept-Ranges": "bytes",
+  "Age": "293822",
+  "Cache-Control": "no-store",
+  "Content-Type": "txt/html",
+  "Date": "Fri, 1 Mar 2024 23:41:18 GMT",
+  "Expires": "Sat, 2 Mar 2024 06:41:18 GMT"
+}
+*********************
+0: "GET http://run.mocky.io/v3/d2599083-5d59-4e74-a996-1a7296ae29fa HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:06:38 2024
+0: Requesting "GET http://run.mocky.io/v3/d2599083-5d59-4e74-a996-1a7296ae29fa HTTP/1.1" from run.mocky.io
+0: not in cache
+0: Requesting "GET http://run.mocky.io/v3/d2599083-5d59-4e74-a996-1a7296ae29fa HTTP/1.1" from run.mocky.io
+0: Responding "HTTP/1.1 200 OK
+0: not cacheable because cache control is no store
+
+
+*********************
+private test
+http://run.mocky.io/v3/77564979-a67a-4e6d-bda0-70131a2eb410
+{
+  "Accept-Ranges": "bytes",
+  "Age": "293822",
+  "Cache-Control": "private",
+  "Content-Type": "txt/html",
+  "Date": "Fri, 1 Mar 2024 23:41:18 GMT",
+  "Expires": "Sat, 2 Mar 2024 06:41:18 GMT"
+}
+*********************
+16: "GET http://run.mocky.io/v3/77564979-a67a-4e6d-bda0-70131a2eb410 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:12:44 2024
+16: Requesting "GET http://run.mocky.io/v3/77564979-a67a-4e6d-bda0-70131a2eb410 HTTP/1.1" from run.mocky.io
+16: not in cache
+16: Requesting "GET http://run.mocky.io/v3/77564979-a67a-4e6d-bda0-70131a2eb410 HTTP/1.1" from run.mocky.io
+16: Responding "HTTP/1.1 200 OK
+16: not cacheable because cache control is private
+
+
 
 ---------------
 POST
 ---------------
-58: "POST http://httpbin.org/post HTTP/1.1" from 10.197.140.48 @ Fri Mar  1 21:37:57 2024
-58: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
-58: Received "HTTP/1.1 200 OK" from httpbin.org
-58: Responding "HTTP/1.1 200 OK
+http://httpbin.org/forms/post
+
+0: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:09 2024
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+0: not in cache
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+0: Responding "HTTP/1.1 200 OK
+0: cached, but requires re-validation
+1: "POST http://httpbin.org/post HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:37 2024
+1: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+1: Received "HTTP/1.1 200 OK" from httpbin.org
+1: Responding "HTTP/1.1 200 OK

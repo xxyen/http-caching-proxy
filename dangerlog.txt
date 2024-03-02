@@ -13,6 +13,26 @@ When the request from the client is invalid, we reply with a 400 code.
 When the response from the server is malformed, we reply with a 502 code.
 
 Exception:
-We implemented basic exception guarantee.
+We implemented strong exception guarantee.
 We use try - catch to catch exception when using recv()
 We delete objects which have been allocated by new.
+No side-effects if an exception is thrown: objects are unmodified, and no memory is leaked.
+
+Validation logic:
+See flowchart "validation logic.jpg"
+
+Synchronization:
+When performing log write operations, we use mutex lock to ensure only one thread can modify the file at a time.
+When performing cache write operations (cache->put), we use mutex lock to ensure only one thread can modify the cache at a time.
+
+Cache:
+We use a unordered_map to store uri and recording response. A list is used to record the order that response be put in the cache.
+We use Least Recently Used (LRU) policy. Every time a data is accessed, it is updated to the top of the list. When the cache reaches its maximum capacity, delete the last data in the list, that is, eliminate the least used data.
+
+Concurrency:
+We use pthread_create to address every request.
+
+C++ style:
+We have abstracted some classes(like request, response...),
+encapsulated the fields and methods of the classes together, making the code structure more clear and easier to maintain.
+

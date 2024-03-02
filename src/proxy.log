@@ -1,0 +1,41 @@
+0: "GET http://httpbin.org/forms/post HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:09 2024
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+0: not in cache
+0: Requesting "GET http://httpbin.org/forms/post HTTP/1.1" from httpbin.org
+0: Responding "HTTP/1.1 200 OK
+0: cached, but requires re-validation
+1: "GET http://httpbin.org/favicon.ico HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:10 2024
+1: Requesting "GET http://httpbin.org/favicon.ico HTTP/1.1" from httpbin.org
+1: not in cache
+1: Requesting "GET http://httpbin.org/favicon.ico HTTP/1.1" from httpbin.org
+1: Responding "HTTP/1.1 404 NOT FOUND
+1: cached, but requires re-validation
+2: ERROR Invalid receive!
+3: "POST http://httpbin.org/post HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:37 2024
+3: Requesting "POST http://httpbin.org/post HTTP/1.1" from httpbin.org
+3: Received "HTTP/1.1 200 OK" from httpbin.org
+3: Responding "HTTP/1.1 200 OK
+4: "GET http://httpbin.org/favicon.ico HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:37 2024
+4: Requesting "GET http://httpbin.org/favicon.ico HTTP/1.1" from httpbin.org
+4: in cache, valid 
+4: Responding "HTTP/1.1 404 NOT FOUND
+5: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:52 2024
+5: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+5: Responding "HTTP/1.1 200 OK"
+6: "CONNECT push.services.mozilla.com:443 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:19:55 2024
+6: Requesting "CONNECT push.services.mozilla.com:443 HTTP/1.1" from push.services.mozilla.com
+6: Responding "HTTP/1.1 200 OK"
+7: Tunnel closed
+7: "CONNECT spocs.getpocket.com:443 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:20:32 2024
+8: "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:20:32 2024
+8: Requesting "CONNECT firefox-api-proxy.cdn.mozilla.net:443 HTTP/1.1" from firefox-api-proxy.cdn.mozilla.net
+8: Responding "HTTP/1.1 200 OK"
+7: Requesting "CONNECT spocs.getpocket.com:443 HTTP/1.1" from spocs.getpocket.com
+7: Responding "HTTP/1.1 200 OK"
+6: Tunnel closed
+9: "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from 10.194.148.158 @ Sat Mar  2 01:21:02 2024
+9: Requesting "CONNECT mozilla.cloudflare-dns.com:443 HTTP/1.1" from mozilla.cloudflare-dns.com
+9: Responding "HTTP/1.1 200 OK"
+9: Tunnel closed
+7: Tunnel closed
+11: Tunnel closed
